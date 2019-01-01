@@ -2,93 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://karatejb.github.io/en/Git/12.%20Submodules/</loc>
+    
+    <lastmod>2019-01-01T07:44:27.469Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/11.%20Git%20Ignore/</loc>
+    
+    <lastmod>2019-01-01T07:44:21.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/10.%20Garbage%20Collection/</loc>
+    
+    <lastmod>2019-01-01T07:44:15.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/09.%20Remote/</loc>
+    
+    <lastmod>2019-01-01T07:44:08.775Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/08.%20Stash/</loc>
+    
+    <lastmod>2019-01-01T07:44:01.944Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/07.%20Tag/</loc>
+    
+    <lastmod>2019-01-01T07:43:56.142Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/06.%20Branch/</loc>
+    
+    <lastmod>2019-01-01T07:43:49.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/05.%20Log/</loc>
+    
+    <lastmod>2019-01-01T07:43:42.663Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/04.%20Reset/</loc>
+    
+    <lastmod>2019-01-01T07:43:35.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/03.%20Diff/</loc>
+    
+    <lastmod>2019-01-01T07:43:23.530Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/02.%20Commit/</loc>
+    
+    <lastmod>2019-01-01T07:43:14.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karatejb.github.io/en/Git/01.%20Initial/</loc>
+    
+    <lastmod>2019-01-01T07:42:19.607Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://karatejb.github.io/zh-tw/About/</loc>
     
     <lastmod>2019-01-01T07:16:24.712Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2001.%20Initial/</loc>
-    
-    <lastmod>2019-01-01T06:52:19.014Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2002.%20Commit/</loc>
-    
-    <lastmod>2019-01-01T06:51:53.220Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2003.%20Diff/</loc>
-    
-    <lastmod>2019-01-01T06:51:32.364Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2004.%20Reset/</loc>
-    
-    <lastmod>2019-01-01T06:51:15.317Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2005.%20Log/</loc>
-    
-    <lastmod>2019-01-01T06:50:59.117Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2006.%20Branch/</loc>
-    
-    <lastmod>2019-01-01T06:50:44.651Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2007.%20Tag/</loc>
-    
-    <lastmod>2019-01-01T06:50:15.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2008.%20Stash/</loc>
-    
-    <lastmod>2019-01-01T06:49:49.384Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2009.%20Remote/</loc>
-    
-    <lastmod>2019-01-01T06:49:21.218Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2010.%20Garbage%20Collection/</loc>
-    
-    <lastmod>2019-01-01T06:48:49.119Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2011.%20Git%20Ignore/</loc>
-    
-    <lastmod>2019-01-01T06:48:16.518Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karatejb.github.io/en/Git/%5BGit%5D%2012.%20Submodules/</loc>
-    
-    <lastmod>2019-01-01T06:47:27.820Z</lastmod>
     
   </url>
   

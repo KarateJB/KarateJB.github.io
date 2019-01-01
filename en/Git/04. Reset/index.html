@@ -7,20 +7,22 @@
   
   
   
-  <title>08. Stash | </title>
+  <title>[Git] 04. Reset | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
+  <meta name="description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="08. Stash">
-<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 08. Stash/index.html">
+<meta property="og:title" content="[Git] 04. Reset">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/04. Reset/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
+<meta property="og:description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-01T06:49:49.384Z">
+<meta property="og:image" content="https://karatejb.github.io/en/Git/assets/009.png">
+<meta property="og:updated_time" content="2019-01-01T07:43:35.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="08. Stash">
-<meta name="twitter:description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
+<meta name="twitter:title" content="[Git] 04. Reset">
+<meta name="twitter:description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
+<meta name="twitter:image" content="https://karatejb.github.io/en/Git/assets/009.png">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -258,11 +260,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git/[Git] 08. Stash" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/04. Reset" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 08. Stash/" class="article-date">
-      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">2018-12-26</time>
+      <a href="/en/Git/04. Reset/" class="article-date">
+      <time datetime="2018-12-22T23:43:24.000Z" itemprop="datePublished">2018-12-23</time>
 </a>
 
     </div>
@@ -276,7 +278,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      08. Stash
+      [Git] 04. Reset
     </h1>
   
 
@@ -302,30 +304,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <blockquote>
-<p>While we would like to switch our job to other branch and save current codes immediatly</p>
-</blockquote>
-<h2 id="Use-reset"><a href="#Use-reset" class="headerlink" title="Use reset"></a>Use reset</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git commit -m &quot;Temporaryly commit, but not completed...&quot;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">then after doing something... we discard the last commit by rest.</span><br></pre></td></tr></table></figure>
-<p>$ git reset HEAD^ –hard<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## Use Stash</span><br><span class="line"></span><br><span class="line">While we have not staged current modified codes, use `stash` to save them temporaryly.</span><br></pre></td></tr></table></figure></p>
-<p>$ git stash<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; If you want to stash the untracked files as well</span><br><span class="line">``` </span><br><span class="line">$ git stash -u</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>List stash</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>POP the stash (Which will remove the stash after apply it on the same branch)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash pop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Apply the stash(Which will not remove the stash after apply it)</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash apply stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>If the specified name of stash is not given, the latest stash will be applied</p>
-</blockquote>
-<ul>
-<li>Remove stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash drop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <h1 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h1><h2 id="Checkout-file-for-latest-commit"><a href="#Checkout-file-for-latest-commit" class="headerlink" title="Checkout file for latest commit"></a>Checkout file for latest commit</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout xxx.file</span><br></pre></td></tr></table></figure>
+<h2 id="Reset-to-relative-commit-previous-commit"><a href="#Reset-to-relative-commit-previous-commit" class="headerlink" title="Reset to relative commit (^: previous commit)"></a>Reset to relative commit (^: previous commit)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reset &#123;sha1-code&#125;^</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">or</span><br></pre></td></tr></table></figure>
+<p>$ git reset {sha1-code}~1<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; *Git reset modes*</span><br><span class="line">&gt; </span><br><span class="line">&gt; * mixed (Default)</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * soft</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * hard</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes on working tree and index</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">##  Reset modes example</span><br><span class="line"></span><br><span class="line">Commit 3 times as following,</span><br><span class="line"></span><br><span class="line">![](../assets/001.png)</span><br><span class="line"></span><br><span class="line">![](../assets/002.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Then make changes and add to index. The diff results ...</span><br><span class="line"></span><br><span class="line">`git diff` (Compare working tree to index)</span><br><span class="line"></span><br><span class="line">No difference</span><br><span class="line"></span><br><span class="line">`git diff --cached` (Compare index to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/003.png)</span><br><span class="line"></span><br><span class="line">`git diff HEAD` (Compare working tree to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/004.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Now reset the the 1st commit and see the differences between 3 modes</span><br><span class="line"></span><br><span class="line">* mixed</span><br></pre></td></tr></table></figure></p>
+<p>$ git reset –mixed af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/005.png)</span><br><span class="line"></span><br><span class="line">![](../assets/006.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff --cached` will get nothing.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* soft</span><br></pre></td></tr></table></figure></p>
+<p>$ git reset –soft af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/007.png)</span><br><span class="line"></span><br><span class="line">![](../assets/008.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff` will get nothing. </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* hard</span><br></pre></td></tr></table></figure></p>
+<p>$ git reset –hard af01615<br><code>`</code></p>
+<p><img src="../assets/009.png" alt=""></p>
+<p>ps. <code>git diff</code>,  <code>git diff --cached</code>,  <code>git diff HEAD</code> will all get nothing. </p>
 
       
     </div>
@@ -334,13 +320,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/en/Git/[Git] 08. Stash/">08. Stash</a></p>
+        <p><span>本文标题:</span><a href="/en/Git/04. Reset/">[Git] 04. Reset</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
-        <p><span>发布时间:</span>2018年12月26日 - 07时43分</p>
-        <p><span>最后更新:</span>2019年01月01日 - 14时49分</p>
+        <p><span>发布时间:</span>2018年12月23日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时43分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 08. Stash/" title="08. Stash">https://karatejb.github.io/en/Git/[Git] 08. Stash/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 08. Stash/　　作者: karatejb" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/04. Reset/" title="[Git] 04. Reset">https://karatejb.github.io/en/Git/04. Reset/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/04. Reset/　　作者: karatejb" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -351,18 +337,18 @@
 
 <nav id="article-nav">
   
-    <a href="/en/Git/[Git] 09. Remote/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/en/Git/05. Log/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          09. Remote
+          [Git] 05. Log
         
       </div>
     </a>
   
   
-    <a href="/en/Git/[Git] 07. Tag/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">07. Tag</div>
+    <a href="/en/Git/03. Diff/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Git] 03. Diff</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -374,7 +360,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Table of contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-reset"><span class="toc-number">1.</span> <span class="toc-text">Use reset</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reset"><span class="toc-number">1.</span> <span class="toc-text">Reset</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkout-file-for-latest-commit"><span class="toc-number">1.1.</span> <span class="toc-text">Checkout file for latest commit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reset-to-relative-commit-previous-commit"><span class="toc-number">1.2.</span> <span class="toc-text">Reset to relative commit (^: previous commit)</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -494,18 +480,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/en/Git/[Git] 09. Remote/" title="上一篇: 09. Remote">
+            <a href="/en/Git/05. Log/" title="上一篇: [Git] 05. Log">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/en/Git/[Git] 07. Tag/" title="下一篇: 07. Tag">
+            <a href="/en/Git/03. Diff/" title="下一篇: [Git] 03. Diff">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/12. Submodules/">[Git] 12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/11. Git Ignore/">[Git] 11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/09. Remote/">[Git] 09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/08. Stash/">[Git] 08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/07. Tag/">[Git] 07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/06. Branch/">[Git] 06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/05. Log/">[Git] 05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/04. Reset/">[Git] 04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/03. Diff/">[Git] 03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/02. Commit/">[Git] 02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/01. Initial/">[Git] 01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 

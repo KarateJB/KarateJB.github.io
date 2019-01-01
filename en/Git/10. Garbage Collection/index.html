@@ -7,20 +7,20 @@
   
   
   
-  <title>05. Log | </title>
+  <title>[Git] 10. Garbage Collection | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Log$ git log --oneline --graph $ git log --author=&amp;quot;JB&amp;quot; $ git log --after=&amp;quot;2018-03-02&amp;quot; --since=&amp;quot;10am&amp;quot; --until=&amp;quot;18pm&amp;quot; $ git log --pretty=format:&amp;quot;%H %an %ad&amp;q">
+  <meta name="description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="05. Log">
-<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 05. Log/index.html">
+<meta property="og:title" content="[Git] 10. Garbage Collection">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/10. Garbage Collection/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Log$ git log --oneline --graph $ git log --author=&amp;quot;JB&amp;quot; $ git log --after=&amp;quot;2018-03-02&amp;quot; --since=&amp;quot;10am&amp;quot; --until=&amp;quot;18pm&amp;quot; $ git log --pretty=format:&amp;quot;%H %an %ad&amp;q">
+<meta property="og:description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-01T06:50:59.117Z">
+<meta property="og:updated_time" content="2019-01-01T07:44:15.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="05. Log">
-<meta name="twitter:description" content="Log$ git log --oneline --graph $ git log --author=&amp;quot;JB&amp;quot; $ git log --after=&amp;quot;2018-03-02&amp;quot; --since=&amp;quot;10am&amp;quot; --until=&amp;quot;18pm&amp;quot; $ git log --pretty=format:&amp;quot;%H %an %ad&amp;q">
+<meta name="twitter:title" content="[Git] 10. Garbage Collection">
+<meta name="twitter:description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -258,11 +258,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git/[Git] 05. Log" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/10. Garbage Collection" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 05. Log/" class="article-date">
-      <time datetime="2018-12-23T23:43:24.000Z" itemprop="datePublished">2018-12-24</time>
+      <a href="/en/Git/10. Garbage Collection/" class="article-date">
+      <time datetime="2018-12-27T23:43:24.000Z" itemprop="datePublished">2018-12-28</time>
 </a>
 
     </div>
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      05. Log
+      [Git] 10. Garbage Collection
     </h1>
   
 
@@ -302,20 +302,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --oneline --graph</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --author=&quot;JB&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --after=&quot;2018-03-02&quot; --since=&quot;10am&quot; --until=&quot;18pm&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --pretty=format:&quot;%H %an %ad&quot;</span><br><span class="line">$ git log --pretty=format:&quot;%h %an %ad&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --after=&quot;2018-07-11&quot; --pretty=format:&quot;%h %an %ad&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="Search-commit-messages"><a href="#Search-commit-messages" class="headerlink" title="Search commit messages"></a>Search commit messages</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --grep=&quot;Fix bugs&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="See-commit-logs-for-every-line-in-a-file"><a href="#See-commit-logs-for-every-line-in-a-file" class="headerlink" title="See commit logs for every line in a file"></a>See commit logs for every line in a file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git blame xxx.file</span><br></pre></td></tr></table></figure>
-<h2 id="See-commit-logs-for-certain-lines-in-a-file"><a href="#See-commit-logs-for-certain-lines-in-a-file" class="headerlink" title="See commit logs for certain lines in a file"></a>See commit logs for certain lines in a file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git blame -L 10,20 xxx.file</span><br></pre></td></tr></table></figure>
-<h2 id="Verifies-the-connectivity-and-validity-of-the-objects"><a href="#Verifies-the-connectivity-and-validity-of-the-objects" class="headerlink" title="Verifies the connectivity and validity of the objects"></a>Verifies the connectivity and validity of the objects</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fsck</span><br></pre></td></tr></table></figure>
-<p>and for unreachable objects</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fsck --unreachable</span><br></pre></td></tr></table></figure>
-<h2 id="reflog-show-commit-and-head-moving-logs"><a href="#reflog-show-commit-and-head-moving-logs" class="headerlink" title="reflog: show commit and head moving logs"></a>reflog: show commit and head moving logs</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure>
-<h2 id="reflog-clean-logs-nake-forbidden-objects-to-unreachable"><a href="#reflog-clean-logs-nake-forbidden-objects-to-unreachable" class="headerlink" title="reflog: clean logs (nake forbidden objects to unreachable)"></a>reflog: clean logs (nake forbidden objects to unreachable)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reflog expire --all --expire=now</span><br></pre></td></tr></table></figure>
-<h2 id="list-files"><a href="#list-files" class="headerlink" title="list files"></a>list files</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git ls-files -s</span><br></pre></td></tr></table></figure>
+        <h1 id="Garbage-collection"><a href="#Garbage-collection" class="headerlink" title="Garbage collection"></a>Garbage collection</h1><h2 id="GC-immediatly"><a href="#GC-immediatly" class="headerlink" title="GC immediatly"></a>GC immediatly</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git gc --prune=now</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Don’t forget the reflog, make them expired by <code>$ git reflog expire --all --expire=now</code></p>
+</blockquote>
 
       
     </div>
@@ -324,13 +314,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/en/Git/[Git] 05. Log/">05. Log</a></p>
+        <p><span>本文标题:</span><a href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
-        <p><span>发布时间:</span>2018年12月24日 - 07时43分</p>
-        <p><span>最后更新:</span>2019年01月01日 - 14时50分</p>
+        <p><span>发布时间:</span>2018年12月28日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 05. Log/" title="05. Log">https://karatejb.github.io/en/Git/[Git] 05. Log/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 05. Log/　　作者: karatejb" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/10. Garbage Collection/" title="[Git] 10. Garbage Collection">https://karatejb.github.io/en/Git/10. Garbage Collection/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/10. Garbage Collection/　　作者: karatejb" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -341,18 +331,18 @@
 
 <nav id="article-nav">
   
-    <a href="/en/Git/[Git] 06. Branch/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/en/Git/11. Git Ignore/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          06. Branch
+          [Git] 11. Git Ignore
         
       </div>
     </a>
   
   
-    <a href="/en/Git/[Git] 04. Reset/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">04. Reset</div>
+    <a href="/en/Git/09. Remote/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Git] 09. Remote</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -364,7 +354,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Table of contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Log"><span class="toc-number">1.</span> <span class="toc-text">Log</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Search-commit-messages"><span class="toc-number">1.1.</span> <span class="toc-text">Search commit messages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-commit-logs-for-every-line-in-a-file"><span class="toc-number">1.2.</span> <span class="toc-text">See commit logs for every line in a file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#See-commit-logs-for-certain-lines-in-a-file"><span class="toc-number">1.3.</span> <span class="toc-text">See commit logs for certain lines in a file</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Verifies-the-connectivity-and-validity-of-the-objects"><span class="toc-number">1.4.</span> <span class="toc-text">Verifies the connectivity and validity of the objects</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reflog-show-commit-and-head-moving-logs"><span class="toc-number">1.5.</span> <span class="toc-text">reflog: show commit and head moving logs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reflog-clean-logs-nake-forbidden-objects-to-unreachable"><span class="toc-number">1.6.</span> <span class="toc-text">reflog: clean logs (nake forbidden objects to unreachable)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#list-files"><span class="toc-number">1.7.</span> <span class="toc-text">list files</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Garbage-collection"><span class="toc-number">1.</span> <span class="toc-text">Garbage collection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GC-immediatly"><span class="toc-number">1.1.</span> <span class="toc-text">GC immediatly</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -484,18 +474,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/en/Git/[Git] 06. Branch/" title="上一篇: 06. Branch">
+            <a href="/en/Git/11. Git Ignore/" title="上一篇: [Git] 11. Git Ignore">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/en/Git/[Git] 04. Reset/" title="下一篇: 04. Reset">
+            <a href="/en/Git/09. Remote/" title="下一篇: [Git] 09. Remote">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/12. Submodules/">[Git] 12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/11. Git Ignore/">[Git] 11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/09. Remote/">[Git] 09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/08. Stash/">[Git] 08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/07. Tag/">[Git] 07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/06. Branch/">[Git] 06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/05. Log/">[Git] 05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/04. Reset/">[Git] 04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/03. Diff/">[Git] 03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/02. Commit/">[Git] 02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/01. Initial/">[Git] 01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 

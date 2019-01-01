@@ -7,22 +7,20 @@
   
   
   
-  <title>04. Reset | </title>
+  <title>[Git] 06. Branch | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
+  <meta name="description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="04. Reset">
-<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 04. Reset/index.html">
+<meta property="og:title" content="[Git] 06. Branch">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/06. Branch/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
+<meta property="og:description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://karatejb.github.io/en/Git/assets/009.png">
-<meta property="og:updated_time" content="2019-01-01T06:51:15.317Z">
+<meta property="og:updated_time" content="2019-01-01T07:43:49.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="04. Reset">
-<meta name="twitter:description" content="ResetCheckout file for latest commit$ git checkout xxx.file Reset to relative commit (^: previous commit)$ git reset &amp;#123;sha1-code&amp;#125;^``` or $ git reset {sha1-code}~1&amp;gt; *Git reset modes*&amp;gt; &amp;g">
-<meta name="twitter:image" content="https://karatejb.github.io/en/Git/assets/009.png">
+<meta name="twitter:title" content="[Git] 06. Branch">
+<meta name="twitter:description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -260,11 +258,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git/[Git] 04. Reset" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/06. Branch" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 04. Reset/" class="article-date">
-      <time datetime="2018-12-22T23:43:24.000Z" itemprop="datePublished">2018-12-23</time>
+      <a href="/en/Git/06. Branch/" class="article-date">
+      <time datetime="2018-12-24T23:43:24.000Z" itemprop="datePublished">2018-12-25</time>
 </a>
 
     </div>
@@ -278,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      04. Reset
+      [Git] 06. Branch
     </h1>
   
 
@@ -304,14 +302,51 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h1><h2 id="Checkout-file-for-latest-commit"><a href="#Checkout-file-for-latest-commit" class="headerlink" title="Checkout file for latest commit"></a>Checkout file for latest commit</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout xxx.file</span><br></pre></td></tr></table></figure>
-<h2 id="Reset-to-relative-commit-previous-commit"><a href="#Reset-to-relative-commit-previous-commit" class="headerlink" title="Reset to relative commit (^: previous commit)"></a>Reset to relative commit (^: previous commit)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reset &#123;sha1-code&#125;^</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">or</span><br></pre></td></tr></table></figure>
-<p>$ git reset {sha1-code}~1<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; *Git reset modes*</span><br><span class="line">&gt; </span><br><span class="line">&gt; * mixed (Default)</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * soft</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * hard</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes on working tree and index</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">##  Reset modes example</span><br><span class="line"></span><br><span class="line">Commit 3 times as following,</span><br><span class="line"></span><br><span class="line">![](../assets/001.png)</span><br><span class="line"></span><br><span class="line">![](../assets/002.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Then make changes and add to index. The diff results ...</span><br><span class="line"></span><br><span class="line">`git diff` (Compare working tree to index)</span><br><span class="line"></span><br><span class="line">No difference</span><br><span class="line"></span><br><span class="line">`git diff --cached` (Compare index to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/003.png)</span><br><span class="line"></span><br><span class="line">`git diff HEAD` (Compare working tree to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/004.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Now reset the the 1st commit and see the differences between 3 modes</span><br><span class="line"></span><br><span class="line">* mixed</span><br></pre></td></tr></table></figure></p>
-<p>$ git reset –mixed af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/005.png)</span><br><span class="line"></span><br><span class="line">![](../assets/006.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff --cached` will get nothing.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* soft</span><br></pre></td></tr></table></figure></p>
-<p>$ git reset –soft af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/007.png)</span><br><span class="line"></span><br><span class="line">![](../assets/008.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff` will get nothing. </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* hard</span><br></pre></td></tr></table></figure></p>
-<p>$ git reset –hard af01615<br><code>`</code></p>
-<p><img src="../assets/009.png" alt=""></p>
-<p>ps. <code>git diff</code>,  <code>git diff --cached</code>,  <code>git diff HEAD</code> will all get nothing. </p>
+        <h1 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h1><h2 id="List-branches"><a href="#List-branches" class="headerlink" title="List branches"></a>List branches</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:center">in short</th>
+<th style="text-align:center">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">(no parameters)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List local branches</td>
+</tr>
+<tr>
+<td style="text-align:left">–remote</td>
+<td style="text-align:center">-r</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List remote branches</td>
+</tr>
+<tr>
+<td style="text-align:left">–all</td>
+<td style="text-align:center">-a</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List local and remote branches</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Create-new-branch"><a href="#Create-new-branch" class="headerlink" title="Create new branch"></a>Create new branch</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch &#123;new_branch_name&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Checkout-branch-or-create-new-branch-if-not-exist"><a href="#Checkout-branch-or-create-new-branch-if-not-exist" class="headerlink" title="Checkout branch or create new branch if not exist"></a>Checkout branch or create new branch if not exist</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b &#123;branch_name&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Rename branch</span><br></pre></td></tr></table></figure>
+<p>$ git branch -m {old_branch_name} {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch -d {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch (force)</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch -D {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Checkout certain commit and create branch from it</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {sha-1 code}<br>$ git branch {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">or one line like this</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch {new_branch_name} {sha-1 code}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Merge branches</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {source_branch}<br>$ git merge {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict...</span><br><span class="line"></span><br><span class="line">- Apply source ones</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout –ours xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Apply target ones</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout –theirs xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Merge certain commit from other branch</span><br></pre></td></tr></table></figure></p>
+<p>$ git cherry-pick {sha-1 code 1} {sha-1 code 2}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Pick certain commit to index</span><br></pre></td></tr></table></figure></p>
+<p>$ git cherry-pick {sha-1 code} –no-commit<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Rebase branches</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {source_branch}<br>$ git rebase {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict, use the same commands on *Merge Branch* and then</span><br></pre></td></tr></table></figure></p>
+<p>$ git rebase –continue<br><code>`</code></p>
 
       
     </div>
@@ -320,13 +355,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/en/Git/[Git] 04. Reset/">04. Reset</a></p>
+        <p><span>本文标题:</span><a href="/en/Git/06. Branch/">[Git] 06. Branch</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
-        <p><span>发布时间:</span>2018年12月23日 - 07时43分</p>
-        <p><span>最后更新:</span>2019年01月01日 - 14时51分</p>
+        <p><span>发布时间:</span>2018年12月25日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时43分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 04. Reset/" title="04. Reset">https://karatejb.github.io/en/Git/[Git] 04. Reset/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 04. Reset/　　作者: karatejb" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/06. Branch/" title="[Git] 06. Branch">https://karatejb.github.io/en/Git/06. Branch/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/06. Branch/　　作者: karatejb" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -337,18 +372,18 @@
 
 <nav id="article-nav">
   
-    <a href="/en/Git/[Git] 05. Log/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/en/Git/07. Tag/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          05. Log
+          [Git] 07. Tag
         
       </div>
     </a>
   
   
-    <a href="/en/Git/[Git] 03. Diff/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">03. Diff</div>
+    <a href="/en/Git/05. Log/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Git] 05. Log</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -360,7 +395,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Table of contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reset"><span class="toc-number">1.</span> <span class="toc-text">Reset</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkout-file-for-latest-commit"><span class="toc-number">1.1.</span> <span class="toc-text">Checkout file for latest commit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reset-to-relative-commit-previous-commit"><span class="toc-number">1.2.</span> <span class="toc-text">Reset to relative commit (^: previous commit)</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Branch"><span class="toc-number">1.</span> <span class="toc-text">Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#List-branches"><span class="toc-number">1.1.</span> <span class="toc-text">List branches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-new-branch"><span class="toc-number">1.2.</span> <span class="toc-text">Create new branch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkout-branch-or-create-new-branch-if-not-exist"><span class="toc-number">1.3.</span> <span class="toc-text">Checkout branch or create new branch if not exist</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -480,18 +515,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/en/Git/[Git] 05. Log/" title="上一篇: 05. Log">
+            <a href="/en/Git/07. Tag/" title="上一篇: [Git] 07. Tag">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/en/Git/[Git] 03. Diff/" title="下一篇: 03. Diff">
+            <a href="/en/Git/05. Log/" title="下一篇: [Git] 05. Log">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/12. Submodules/">[Git] 12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/11. Git Ignore/">[Git] 11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/09. Remote/">[Git] 09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/08. Stash/">[Git] 08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/07. Tag/">[Git] 07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/06. Branch/">[Git] 06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/05. Log/">[Git] 05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/04. Reset/">[Git] 04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/03. Diff/">[Git] 03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/02. Commit/">[Git] 02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/01. Initial/">[Git] 01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 

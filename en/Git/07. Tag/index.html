@@ -7,22 +7,20 @@
   
   
   
-  <title>03. Diff | </title>
+  <title>[Git] 07. Tag | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
+  <meta name="description" content="TagCreate lightweight tag (for private or temporary purpose)$ git tag &amp;#123;tag_name&amp;#125; &amp;#123;sha-1_code&amp;#125;``` ## Create annotated tag (for release or milestones) $ git tag {tag_name} {sha-1_cod">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="03. Diff">
-<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 03. Diff/index.html">
+<meta property="og:title" content="[Git] 07. Tag">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/07. Tag/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
+<meta property="og:description" content="TagCreate lightweight tag (for private or temporary purpose)$ git tag &amp;#123;tag_name&amp;#125; &amp;#123;sha-1_code&amp;#125;``` ## Create annotated tag (for release or milestones) $ git tag {tag_name} {sha-1_cod">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://karatejb.github.io/en/Git/assets/010.png">
-<meta property="og:updated_time" content="2019-01-01T06:51:32.364Z">
+<meta property="og:updated_time" content="2019-01-01T07:43:56.142Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="03. Diff">
-<meta name="twitter:description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
-<meta name="twitter:image" content="https://karatejb.github.io/en/Git/assets/010.png">
+<meta name="twitter:title" content="[Git] 07. Tag">
+<meta name="twitter:description" content="TagCreate lightweight tag (for private or temporary purpose)$ git tag &amp;#123;tag_name&amp;#125; &amp;#123;sha-1_code&amp;#125;``` ## Create annotated tag (for release or milestones) $ git tag {tag_name} {sha-1_cod">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -260,11 +258,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git/[Git] 03. Diff" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/07. Tag" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 03. Diff/" class="article-date">
-      <time datetime="2018-12-21T23:43:24.000Z" itemprop="datePublished">2018-12-22</time>
+      <a href="/en/Git/07. Tag/" class="article-date">
+      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">2018-12-26</time>
 </a>
 
     </div>
@@ -278,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      03. Diff
+      [Git] 07. Tag
     </h1>
   
 
@@ -304,13 +302,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h1><p><img src="../assets/010.png" alt=""></p>
-<h2 id="Compare-working-tree-to-index"><a href="#Compare-working-tree-to-index" class="headerlink" title="Compare working tree to index"></a>Compare working tree to index</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
-<h2 id="Compare-index-to-HEAD"><a href="#Compare-index-to-HEAD" class="headerlink" title="Compare index to HEAD"></a>Compare index to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
-<h2 id="Compare-working-tree-to-HEAD"><a href="#Compare-working-tree-to-HEAD" class="headerlink" title="Compare working tree to HEAD"></a>Compare working tree to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff HEAD</span><br></pre></td></tr></table></figure>
-<h2 id="Comapare-2-commits"><a href="#Comapare-2-commits" class="headerlink" title="Comapare 2 commits"></a>Comapare 2 commits</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt;</span><br></pre></td></tr></table></figure>
-<p>On certain file,<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file</span><br></pre></td></tr></table></figure></p>
-<p>Output a file<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file &gt; xxx.diff</span><br></pre></td></tr></table></figure></p>
+        <h1 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h1><h2 id="Create-lightweight-tag-for-private-or-temporary-purpose"><a href="#Create-lightweight-tag-for-private-or-temporary-purpose" class="headerlink" title="Create lightweight tag (for private or temporary purpose)"></a>Create lightweight tag (for private or temporary purpose)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git tag &#123;tag_name&#125; &#123;sha-1_code&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Create annotated tag (for release or milestones)</span><br></pre></td></tr></table></figure>
+<p>$ git tag {tag_name} {sha-1_code} -a -m “some comments for annotated tag…”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## List tags</span><br></pre></td></tr></table></figure></p>
+<p>$ git tag -l<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete tag</span><br></pre></td></tr></table></figure></p>
+<p>$ git tag -d {tag_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Use alias to create tag</span><br></pre></td></tr></table></figure></p>
+<p>$ git config alias.XXXX ‘!git tag MyTag-$(date +”%Y-%m-%d_%H-%M-%S”)’<br>$ git XXXX {sha-1_code}<br><code>`</code></p>
 
       
     </div>
@@ -319,13 +315,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/en/Git/[Git] 03. Diff/">03. Diff</a></p>
+        <p><span>本文标题:</span><a href="/en/Git/07. Tag/">[Git] 07. Tag</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
-        <p><span>发布时间:</span>2018年12月22日 - 07时43分</p>
-        <p><span>最后更新:</span>2019年01月01日 - 14时51分</p>
+        <p><span>发布时间:</span>2018年12月26日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时43分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 03. Diff/" title="03. Diff">https://karatejb.github.io/en/Git/[Git] 03. Diff/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 03. Diff/　　作者: karatejb" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/07. Tag/" title="[Git] 07. Tag">https://karatejb.github.io/en/Git/07. Tag/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/07. Tag/　　作者: karatejb" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -336,18 +332,18 @@
 
 <nav id="article-nav">
   
-    <a href="/en/Git/[Git] 04. Reset/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/en/Git/08. Stash/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          04. Reset
+          [Git] 08. Stash
         
       </div>
     </a>
   
   
-    <a href="/en/Git/[Git] 02. Commit/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">02. Commit</div>
+    <a href="/en/Git/06. Branch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Git] 06. Branch</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -359,7 +355,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Table of contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Diff"><span class="toc-number">1.</span> <span class="toc-text">Diff</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-working-tree-to-index"><span class="toc-number">1.1.</span> <span class="toc-text">Compare working tree to index</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-index-to-HEAD"><span class="toc-number">1.2.</span> <span class="toc-text">Compare index to HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-working-tree-to-HEAD"><span class="toc-number">1.3.</span> <span class="toc-text">Compare working tree to HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comapare-2-commits"><span class="toc-number">1.4.</span> <span class="toc-text">Comapare 2 commits</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tag"><span class="toc-number">1.</span> <span class="toc-text">Tag</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-lightweight-tag-for-private-or-temporary-purpose"><span class="toc-number">1.1.</span> <span class="toc-text">Create lightweight tag (for private or temporary purpose)</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -479,18 +475,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/en/Git/[Git] 04. Reset/" title="上一篇: 04. Reset">
+            <a href="/en/Git/08. Stash/" title="上一篇: [Git] 08. Stash">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/en/Git/[Git] 02. Commit/" title="下一篇: 02. Commit">
+            <a href="/en/Git/06. Branch/" title="下一篇: [Git] 06. Branch">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/12. Submodules/">[Git] 12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/11. Git Ignore/">[Git] 11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/09. Remote/">[Git] 09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/08. Stash/">[Git] 08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/07. Tag/">[Git] 07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/06. Branch/">[Git] 06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/05. Log/">[Git] 05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/04. Reset/">[Git] 04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/03. Diff/">[Git] 03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/02. Commit/">[Git] 02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/01. Initial/">[Git] 01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 

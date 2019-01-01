@@ -7,20 +7,20 @@
   
   
   
-  <title>10. Garbage Collection | </title>
+  <title>[Git] 08. Stash | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
+  <meta name="description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10. Garbage Collection">
-<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 10. Garbage Collection/index.html">
+<meta property="og:title" content="[Git] 08. Stash">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/08. Stash/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
+<meta property="og:description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-01T06:48:49.119Z">
+<meta property="og:updated_time" content="2019-01-01T07:44:01.944Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="10. Garbage Collection">
-<meta name="twitter:description" content="Garbage collectionGC immediatly$ git gc --prune=now  Don’t forget the reflog, make them expired by $ git reflog expire --all --expire=now">
+<meta name="twitter:title" content="[Git] 08. Stash">
+<meta name="twitter:description" content="While we would like to switch our job to other branch and save current codes immediatly  Use reset$ git add --all$ git commit -m &amp;quot;Temporaryly commit, but not completed...&amp;quot;``` then after doi">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -258,11 +258,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Git/[Git] 10. Garbage Collection" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/08. Stash" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 10. Garbage Collection/" class="article-date">
-      <time datetime="2018-12-27T23:43:24.000Z" itemprop="datePublished">2018-12-28</time>
+      <a href="/en/Git/08. Stash/" class="article-date">
+      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">2018-12-26</time>
 </a>
 
     </div>
@@ -276,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      10. Garbage Collection
+      [Git] 08. Stash
     </h1>
   
 
@@ -302,10 +302,30 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Garbage-collection"><a href="#Garbage-collection" class="headerlink" title="Garbage collection"></a>Garbage collection</h1><h2 id="GC-immediatly"><a href="#GC-immediatly" class="headerlink" title="GC immediatly"></a>GC immediatly</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git gc --prune=now</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Don’t forget the reflog, make them expired by <code>$ git reflog expire --all --expire=now</code></p>
+        <blockquote>
+<p>While we would like to switch our job to other branch and save current codes immediatly</p>
 </blockquote>
+<h2 id="Use-reset"><a href="#Use-reset" class="headerlink" title="Use reset"></a>Use reset</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git commit -m &quot;Temporaryly commit, but not completed...&quot;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">then after doing something... we discard the last commit by rest.</span><br></pre></td></tr></table></figure>
+<p>$ git reset HEAD^ –hard<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## Use Stash</span><br><span class="line"></span><br><span class="line">While we have not staged current modified codes, use `stash` to save them temporaryly.</span><br></pre></td></tr></table></figure></p>
+<p>$ git stash<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; If you want to stash the untracked files as well</span><br><span class="line">``` </span><br><span class="line">$ git stash -u</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>List stash</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POP the stash (Which will remove the stash after apply it on the same branch)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash pop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Apply the stash(Which will not remove the stash after apply it)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash apply stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>If the specified name of stash is not given, the latest stash will be applied</p>
+</blockquote>
+<ul>
+<li>Remove stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash drop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -314,13 +334,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></p>
+        <p><span>本文标题:</span><a href="/en/Git/08. Stash/">[Git] 08. Stash</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
-        <p><span>发布时间:</span>2018年12月28日 - 07时43分</p>
-        <p><span>最后更新:</span>2019年01月01日 - 14时48分</p>
+        <p><span>发布时间:</span>2018年12月26日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 10. Garbage Collection/" title="10. Garbage Collection">https://karatejb.github.io/en/Git/[Git] 10. Garbage Collection/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 10. Garbage Collection/　　作者: karatejb" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/08. Stash/" title="[Git] 08. Stash">https://karatejb.github.io/en/Git/08. Stash/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/08. Stash/　　作者: karatejb" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -331,18 +351,18 @@
 
 <nav id="article-nav">
   
-    <a href="/en/Git/[Git] 11. Git Ignore/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/en/Git/09. Remote/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          11. Git Ignore
+          [Git] 09. Remote
         
       </div>
     </a>
   
   
-    <a href="/en/Git/[Git] 09. Remote/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">09. Remote</div>
+    <a href="/en/Git/07. Tag/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[Git] 07. Tag</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -354,7 +374,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">Table of contents</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Garbage-collection"><span class="toc-number">1.</span> <span class="toc-text">Garbage collection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GC-immediatly"><span class="toc-number">1.1.</span> <span class="toc-text">GC immediatly</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-reset"><span class="toc-number">1.</span> <span class="toc-text">Use reset</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -474,18 +494,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/en/Git/[Git] 11. Git Ignore/" title="上一篇: 11. Git Ignore">
+            <a href="/en/Git/09. Remote/" title="上一篇: [Git] 09. Remote">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/en/Git/[Git] 09. Remote/" title="下一篇: 09. Remote">
+            <a href="/en/Git/07. Tag/" title="下一篇: [Git] 07. Tag">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/12. Submodules/">[Git] 12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/11. Git Ignore/">[Git] 11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/10. Garbage Collection/">[Git] 10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/09. Remote/">[Git] 09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/08. Stash/">[Git] 08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/07. Tag/">[Git] 07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/06. Branch/">[Git] 06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/05. Log/">[Git] 05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/04. Reset/">[Git] 04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/03. Diff/">[Git] 03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/02. Commit/">[Git] 02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/01. Initial/">[Git] 01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh-tw/About/">About Me</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
