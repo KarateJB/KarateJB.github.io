@@ -7,11 +7,11 @@
   
   
   
-  <title>Archives: 2018 | </title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title">
-<meta property="og:url" content="https://karatejb.github.io/archives/2018/index.html">
+<meta property="og:url" content="https://karatejb.github.io/page/2/index.html">
 <meta property="og:site_name">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
+    
+    
+  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -39,9 +42,9 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: false,
+          isHome: true,
           isPost: false,
-          isArchive: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -255,395 +258,254 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Git/[Git] 09. Remote" class="article article-type-post" itemscope="" itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/en/Git/[Git] 09. Remote/" class="article-date">
+      <time datetime="2018-12-26T23:43:24.000Z" itemprop="datePublished">2018-12-27</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/en/Git/[Git] 09. Remote/">09. Remote</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Clone"><a href="#Clone" class="headerlink" title="Clone"></a>Clone</h1><ul>
+<li><p>Add remote end-point</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https://github.com/KarateJB/Test.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Clone</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Push"><a href="#Push" class="headerlink" title="Push"></a>Push</h1><ul>
+<li>Push with setting remote upstream branch<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push -u origin &#123;brach_name_for_remote&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Pull"><a href="#Pull" class="headerlink" title="Pull"></a>Pull</h1><p><code>git pull</code> equals to </p>
+<ol>
+<li><code>git fetch</code></li>
+<li><code>git merger</code></li>
+</ol>
+<h2 id="Pull-remote-branch"><a href="#Pull-remote-branch" class="headerlink" title="Pull remote branch"></a>Pull remote branch</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout --track origin/&lt;branch&gt;</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<h2 id="Pull-by-rebase-Which-will-not-create-a-new-commit-for-merging"><a href="#Pull-by-rebase-Which-will-not-create-a-new-commit-for-merging" class="headerlink" title="Pull by rebase (Which will not create a new commit for merging)"></a>Pull by rebase (Which will not create a new commit for merging)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull --rebase</span><br></pre></td></tr></table></figure>
+<h1 id="Syncing-a-fork"><a href="#Syncing-a-fork" class="headerlink" title="Syncing a fork"></a>Syncing a fork</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch upstream</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge upstream/master</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 12. Submodules/" class="archive-article-date">
-      <time datetime="2018-12-29T23:43:24.000Z" itemprop="datePublished">12-30</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Coding/">Coding</a>
     </div>
 
 
-          
+      
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 11. Git Ignore/" class="archive-article-date">
-      <time datetime="2018-12-28T23:43:24.000Z" itemprop="datePublished">12-29</time>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Git/[Git] 08. Stash" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/en/Git/[Git] 08. Stash/" class="article-date">
+      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">2018-12-26</time>
 </a>
 
-        </div>
-         
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a>
+      <a class="article-title" href="/en/Git/[Git] 08. Stash/">08. Stash</a>
     </h1>
   
 
 
-        <div class="article-info info-on-archive">
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <blockquote>
+<p>While we would like to switch our job to other branch and save current codes immediatly</p>
+</blockquote>
+<h2 id="Use-reset"><a href="#Use-reset" class="headerlink" title="Use reset"></a>Use reset</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git commit -m &quot;Temporaryly commit, but not completed...&quot;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">then after doing something... we discard the last commit by rest.</span><br></pre></td></tr></table></figure>
+<p>$ git reset HEAD^ –hard<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## Use Stash</span><br><span class="line"></span><br><span class="line">While we have not staged current modified codes, use `stash` to save them temporaryly.</span><br></pre></td></tr></table></figure></p>
+<p>$ git stash<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; If you want to stash the untracked files as well</span><br><span class="line">``` </span><br><span class="line">$ git stash -u</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>List stash</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POP the stash (Which will remove the stash after apply it on the same branch)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash pop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Apply the stash(Which will not remove the stash after apply it)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash apply stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>If the specified name of stash is not given, the latest stash will be applied</p>
+</blockquote>
+<ul>
+<li>Remove stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash drop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Coding/">Coding</a>
     </div>
 
 
-          
+      
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 10. Garbage Collection/" class="archive-article-date">
-      <time datetime="2018-12-27T23:43:24.000Z" itemprop="datePublished">12-28</time>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Git/[Git] 07. Tag" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/en/Git/[Git] 07. Tag/" class="article-date">
+      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">2018-12-26</time>
 </a>
 
-        </div>
-         
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a>
+      <a class="article-title" href="/en/Git/[Git] 07. Tag/">07. Tag</a>
     </h1>
   
 
 
-        <div class="article-info info-on-archive">
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <h1 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h1><h2 id="Create-lightweight-tag-for-private-or-temporary-purpose"><a href="#Create-lightweight-tag-for-private-or-temporary-purpose" class="headerlink" title="Create lightweight tag (for private or temporary purpose)"></a>Create lightweight tag (for private or temporary purpose)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git tag &#123;tag_name&#125; &#123;sha-1_code&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Create annotated tag (for release or milestones)</span><br></pre></td></tr></table></figure>
+<p>$ git tag {tag_name} {sha-1_code} -a -m “some comments for annotated tag…”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## List tags</span><br></pre></td></tr></table></figure></p>
+<p>$ git tag -l<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete tag</span><br></pre></td></tr></table></figure></p>
+<p>$ git tag -d {tag_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Use alias to create tag</span><br></pre></td></tr></table></figure></p>
+<p>$ git config alias.XXXX ‘!git tag MyTag-$(date +”%Y-%m-%d_%H-%M-%S”)’<br>$ git XXXX {sha-1_code}<br><code>`</code></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Coding/">Coding</a>
     </div>
 
 
-          
+      
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
+    
   </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 09. Remote/" class="archive-article-date">
-      <time datetime="2018-12-26T23:43:24.000Z" itemprop="datePublished">12-27</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 09. Remote/">09. Remote</a>
-    </h1>
-  
 
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 08. Stash/" class="archive-article-date">
-      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">12-26</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 08. Stash/">08. Stash</a>
-    </h1>
-  
 
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 07. Tag/" class="archive-article-date">
-      <time datetime="2018-12-25T23:43:24.000Z" itemprop="datePublished">12-26</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 07. Tag/">07. Tag</a>
-    </h1>
-  
 
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 06. Branch/" class="archive-article-date">
-      <time datetime="2018-12-24T23:43:24.000Z" itemprop="datePublished">12-25</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 06. Branch/">06. Branch</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 05. Log/" class="archive-article-date">
-      <time datetime="2018-12-23T23:43:24.000Z" itemprop="datePublished">12-24</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 05. Log/">05. Log</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 04. Reset/" class="archive-article-date">
-      <time datetime="2018-12-22T23:43:24.000Z" itemprop="datePublished">12-23</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 04. Reset/">04. Reset</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/en/Git/[Git] 03. Diff/" class="archive-article-date">
-      <time datetime="2018-12-21T23:43:24.000Z" itemprop="datePublished">12-22</time>
-</a>
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/en/Git/[Git] 03. Diff/">03. Diff</a>
-    </h1>
-  
-
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
-
 
 </div>
       <footer id="footer">
@@ -715,18 +577,6 @@ ga('send', 'pageview');
         };
     })
 </script>
-
-    <!-- <button class="hide-labels">TAG 开关</button> -->
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 
 

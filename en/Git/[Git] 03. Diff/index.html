@@ -7,15 +7,22 @@
   
   
   
-  <title></title>
+  <title>03. Diff | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="https://karatejb.github.io/index.html">
+  <meta name="description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="03. Diff">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 03. Diff/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://karatejb.github.io/en/Git/assets/010.png">
+<meta property="og:updated_time" content="2019-01-01T06:51:32.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title">
+<meta name="twitter:title" content="03. Diff">
+<meta name="twitter:description" content="Diff Compare working tree to indexgit diff Compare index to HEADgit diff --cached Compare working tree to HEADgit diff HEAD Comapare 2 commits$ git diff &amp;lt;old_sha1_code&amp;gt; &amp;lt;new_sha1_code&amp;gt; On">
+<meta name="twitter:image" content="https://karatejb.github.io/en/Git/assets/010.png">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
   
@@ -29,9 +36,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -42,8 +46,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -256,13 +260,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Git/[Git] 12. Submodules" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Git/[Git] 03. Diff" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/en/Git/[Git] 12. Submodules/" class="article-date">
-      <time datetime="2018-12-29T23:43:24.000Z" itemprop="datePublished">2018-12-30</time>
+      <a href="/en/Git/[Git] 03. Diff/" class="article-date">
+      <time datetime="2018-12-21T23:43:24.000Z" itemprop="datePublished">2018-12-22</time>
 </a>
 
     </div>
@@ -275,236 +277,249 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a>
+    <h1 class="article-title" itemprop="name">
+      03. Diff
     </h1>
   
 
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="Add-Submodule"><a href="#Add-Submodule" class="headerlink" title="Add Submodule"></a>Add Submodule</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add &lt;git path&gt; &lt;directory name <span class="keyword">for</span> submodule&gt;</span><br></pre></td></tr></table></figure>
-<p>For example, </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add https://github.com/TheForceJB/GitPracticeSub.git GitPracticeSub</span><br></pre></td></tr></table></figure>
-<p><img src="./assets/012.png" alt=""></p>
-<p>In <code>.gitmodules</code>, we will find the following content,</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[submodule &quot;GitPracticeSub&quot;]</span><br><span class="line">path = GitPracticeSub</span><br><span class="line">url = https://github.com/TheForceJB/GitPracticeSub.git</span><br></pre></td></tr></table></figure>
-<h2 id="Creating-Pull-Request"><a href="#Creating-Pull-Request" class="headerlink" title="Creating Pull Request"></a>Creating Pull Request</h2><p>However, if you would like to create some PRs for the submodule.<br>Instead of adding the target repository as submodule directly, we fork it and add the one in our repository as submodule.</p>
-<p>For example, there are 2 repositories in my Github: </p>
-<ol>
-<li><code>KarateJB/GitPractice</code></li>
-<li><code>KarateJB/GitPracticeSub</code> which is forked from <code>TheForceJB/GitPracticeSub</code></li>
-</ol>
-<p>Add <code>KarateJB/GitPracticeSub</code> as sub-module into <code>KarateJB/GitPractice</code>.<br>Modify and create PR at <code>KarateJB/GitPracticeSub</code>.</p>
-<h2 id="Clone-a-repository-with-Submodule"><a href="#Clone-a-repository-with-Submodule" class="headerlink" title="Clone a repository with Submodule"></a>Clone a repository with Submodule</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;repository_url&gt;</span><br><span class="line">$ cd &lt;repository_name&gt; </span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure>
-<p>The above commands equals to</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;repository_url&gt; --recursive</span><br></pre></td></tr></table></figure>
-<h2 id="Remove-Submodule"><a href="#Remove-Submodule" class="headerlink" title="Remove Submodule"></a>Remove Submodule</h2><blockquote>
-<p>Reference : <a href="https://gist.github.com/myusuf3/7f645819ded92bda6677" target="_blank" rel="noopener">myusuf3/delete_git_submodule.md</a></p>
-</blockquote>
-<ol>
-<li>Stage for removal and untrack submodule files </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm --cached &lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Remove files in <code>.git/modules/&lt;submodule&gt;</code></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ rm -rf .git/modules/&lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Commit</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;Removed submodule&quot;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Delete the untracked submodule files</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ rm -rf &lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
-<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Tools - Submodules</a></li>
-<li><a href="http://xtutu.me/git-submodule-and-pull-request/" target="_blank" rel="noopener">Git submodule &amp; pull request ! 让我们啃下这块骨头！</a></li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Git/[Git] 11. Git Ignore" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/en/Git/[Git] 11. Git Ignore/" class="article-date">
-      <time datetime="2018-12-28T23:43:24.000Z" itemprop="datePublished">2018-12-29</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+      <div class="article-info article-info-post">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h1><h2 id="Ignore-single-file"><a href="#Ignore-single-file" class="headerlink" title="Ignore single file"></a>Ignore single file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xxx.log</span><br></pre></td></tr></table></figure>
-<h2 id="Ignore-Logs-xxx-log"><a href="#Ignore-Logs-xxx-log" class="headerlink" title="Ignore ./Logs/xxx.log"></a>Ignore ./Logs/xxx.log</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Logs/xxx.log</span><br></pre></td></tr></table></figure>
-<h2 id="Ignore-all-log-in-any-folder-named-Logs"><a href="#Ignore-all-log-in-any-folder-named-Logs" class="headerlink" title="Ignore all *.log in any folder named Logs"></a>Ignore all *.log in any folder named Logs</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/Logs/*.log</span><br></pre></td></tr></table></figure>
-<h2 id="Ignore-all-log-files"><a href="#Ignore-all-log-files" class="headerlink" title="Ignore all .log files"></a>Ignore all .log files</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.log</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Coding/">Coding</a>
     </div>
 
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Git/[Git] 10. Garbage Collection" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/en/Git/[Git] 10. Garbage Collection/" class="article-date">
-      <time datetime="2018-12-27T23:43:24.000Z" itemprop="datePublished">2018-12-28</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a>
-    </h1>
-  
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
 
-
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Garbage-collection"><a href="#Garbage-collection" class="headerlink" title="Garbage collection"></a>Garbage collection</h1><h2 id="GC-immediatly"><a href="#GC-immediatly" class="headerlink" title="GC immediatly"></a>GC immediatly</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git gc --prune=now</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Don’t forget the reflog, make them expired by <code>$ git reflog expire --all --expire=now</code></p>
-</blockquote>
+        <h1 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h1><p><img src="../assets/010.png" alt=""></p>
+<h2 id="Compare-working-tree-to-index"><a href="#Compare-working-tree-to-index" class="headerlink" title="Compare working tree to index"></a>Compare working tree to index</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+<h2 id="Compare-index-to-HEAD"><a href="#Compare-index-to-HEAD" class="headerlink" title="Compare index to HEAD"></a>Compare index to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff --cached</span><br></pre></td></tr></table></figure>
+<h2 id="Compare-working-tree-to-HEAD"><a href="#Compare-working-tree-to-HEAD" class="headerlink" title="Compare working tree to HEAD"></a>Compare working tree to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff HEAD</span><br></pre></td></tr></table></figure>
+<h2 id="Comapare-2-commits"><a href="#Comapare-2-commits" class="headerlink" title="Comapare 2 commits"></a>Comapare 2 commits</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt;</span><br></pre></td></tr></table></figure>
+<p>On certain file,<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file</span><br></pre></td></tr></table></figure></p>
+<p>Output a file<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file &gt; xxx.diff</span><br></pre></td></tr></table></figure></p>
 
       
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Coding/">Coding</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/en/Git/[Git] 03. Diff/">03. Diff</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
+        <p><span>发布时间:</span>2018年12月22日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 14时51分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 03. Diff/" title="03. Diff">https://karatejb.github.io/en/Git/[Git] 03. Diff/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 03. Diff/　　作者: karatejb" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/en/Git/[Git] 04. Reset/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          04. Reset
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/Git/[Git] 02. Commit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">02. Commit</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Table of contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Diff"><span class="toc-number">1.</span> <span class="toc-text">Diff</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-working-tree-to-index"><span class="toc-number">1.1.</span> <span class="toc-text">Compare working tree to index</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-index-to-HEAD"><span class="toc-number">1.2.</span> <span class="toc-text">Compare index to HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compare-working-tree-to-HEAD"><span class="toc-number">1.3.</span> <span class="toc-text">Compare working tree to HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Comapare-2-commits"><span class="toc-number">1.4.</span> <span class="toc-text">Comapare 2 commits</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="Hide TOC" title="Click here to show/hide TOC">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "Hide TOC";
+    var valueShow = "Show TOC";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
 
+<link rel="stylesheet" type="text/css" href="/css/showshare.css">
+
+<div id="share" class="bdsharebuttonbox">
+    <button class="share-toggle-button"><i class="share-icon fa fa-share-alt"></i>
+    </button>
+    <ul class="share-items">
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-facebook" data-cmd="fbook" title="分享到Facebook"></a></li>
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-twitter" data-cmd="twi" title="分享到Twitter"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-linkedin" data-cmd="linkedin" title="分享到linkedin"></a></li>
+    </ul>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+    <defs>
+        <filter id="goo">
+            <fegaussianblur in="SourceGraphic" stddeviation="12" result="blur"/>
+            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"/>
+            <fecomposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+    </defs>
+</svg>
+<!-- 推荐开源CDN来选取需引用的外部JS //-->
+<script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/TweenMax.js"></script>
+<script>
+    window._bd_share_config = {
+        common: {
+            bdText: '',
+            //文本内容
+            bdDesc: '',
+            // 描述
+            bdUrl: '',
+            // URL地址
+            bdPic: ''
+            // 图片信息
+        },
+        share: [{
+            "bdSize": 24
+        }]
+    }
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33765729-1']);
+    _gaq.push(['_setDomainName', 'chuanke.com']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+    
+      <section id="comments">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=187664764656837&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fb-comments" data-href="https://karatejb.github.io" data-width="10%" data-numposts="5"></div>
+</section>      
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/en/Git/[Git] 04. Reset/" title="上一篇: 04. Reset">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/en/Git/[Git] 02. Commit/" title="下一篇: 02. Commit">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh/About/">About Me</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">

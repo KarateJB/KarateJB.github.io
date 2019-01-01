@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>About Me | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="關於我 2018 iThome Serverless All-star講師 2018 台灣區TMS運輸管理系統 主架構師  2017 台灣及大陸區SAP ERP升級專案 首席專案經理 2018 IT邦幫忙30天鐵人賽Modern Web組成功完賽 2017 IT邦幫忙30天鐵人賽Software development組成功完賽 2013 icash二代非接觸式卡專案上線佈機至全台統一超商，擔任後">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About Me">
+<meta property="og:url" content="https://karatejb.github.io/zh/About/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="關於我 2018 iThome Serverless All-star講師 2018 台灣區TMS運輸管理系統 主架構師  2017 台灣及大陸區SAP ERP升級專案 首席專案經理 2018 IT邦幫忙30天鐵人賽Modern Web組成功完賽 2017 IT邦幫忙30天鐵人賽Software development組成功完賽 2013 icash二代非接觸式卡專案上線佈機至全台統一超商，擔任後">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-01-01T07:00:26.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About Me">
+<meta name="twitter:description" content="關於我 2018 iThome Serverless All-star講師 2018 台灣區TMS運輸管理系統 主架構師  2017 台灣及大陸區SAP ERP升級專案 首席專案經理 2018 IT邦幫忙30天鐵人賽Modern Web組成功完賽 2017 IT邦幫忙30天鐵人賽Software development組成功完賽 2013 icash二代非接觸式卡專案上線佈機至全台統一超商，擔任後">
+  
+    <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">karatejb</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="Search" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menus</li>
+                        <li>Tags</li>
+                        
+                        
+                        <li>About me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">Articles</a></li>
+                        
+                            <li><a href="/categories/coding">Coding</a></li>
+                        
+                            <li><a href="/categories/devops">Devops</a></li>
+                        
+                            <li><a href="/categories/pm">PM</a></li>
+                        
+                            <li><a href="/categories/travel">Travel</a></li>
+                        
+                            <li><a href="/zh/about/">About</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/KarateJB" title="github">github</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="https://www.linkedin.com/in/karatejb/" title="linkedin">linkedin</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/git/" style="font-size: 10px;">git</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">A father and StarWars fan!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">karatejb</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">karatejb</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/coding">Coding</a></li>
+                
+                    <li><a href="/categories/devops">Devops</a></li>
+                
+                    <li><a href="/categories/pm">PM</a></li>
+                
+                    <li><a href="/categories/travel">Travel</a></li>
+                
+                    <li><a href="/zh/about/">About</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/KarateJB" title="github">github</a>
+                    
+                        <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/karatejb/" title="linkedin">linkedin</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-About" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/zh/About/" class="article-date">
+      <time datetime="2014-12-31T23:43:24.000Z" itemprop="datePublished">2015-01-01</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      About Me
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><ul>
+<li>2018 iThome Serverless All-star講師</li>
+<li>2018 台灣區TMS運輸管理系統 主架構師 </li>
+<li>2017 台灣及大陸區SAP ERP升級專案 首席專案經理</li>
+<li>2018 IT邦幫忙30天鐵人賽Modern Web組成功完賽</li>
+<li>2017 IT邦幫忙30天鐵人賽Software development組成功完賽</li>
+<li>2013 icash二代非接觸式卡專案上線佈機至全台統一超商，擔任後端開發Team lead</li>
+<li>2012 icash多通路帳務系統 首席專案經理，如期如質上線後獲得當年公司專案評比第二名</li>
+<li>2012 - 2018 公司內部技術教育訓練講師</li>
+<li>2015 - 至今 敏捷式開發教育訓練及導入 <ol>
+<li>User Story mapping workshop</li>
+<li>How to start a sprint workshop</li>
+</ol>
+</li>
+<li>證照(括號為取得年份)：<ol>
+<li>(2017) 國際敏捷專案管理師 (PMI-ACP)</li>
+<li>(2016) Cetified Scrum Product Owner (Scrum Alliance)</li>
+<li>(2016) 新產品開發管理師國際認證 (NPDP)</li>
+<li>(2013) Certified Scrum Master (Scrum Alliance)</li>
+<li>(2013) UML FUNDAMENTAL</li>
+<li>(2012) 國際專案管理師 (PMP, renew 2 times)</li>
+</ol>
+</li>
+<li>更多資訊：<ol>
+<li><a href="http://karatejb.blogspot.tw/" target="_blank" rel="noopener">個人技術部落格Blogger</a></li>
+<li><a href="https://github.com/KarateJB" target="_blank" rel="noopener">Github</a></li>
+<li><a href="https://www.linkedin.com/in/karatejb/" target="_blank" rel="noopener">Linkedin</a></li>
+</ol>
+</li>
+</ul>
+<h2 id="主要經歷"><a href="#主要經歷" class="headerlink" title="主要經歷"></a>主要經歷</h2><ol>
+<li><p>HR績效評量系統開發</p>
+<ul>
+<li>主架構師，建立Vue.js+ASP.NET MVC/Web API+Redis+Sql Server stack</li>
+<li>兼任Scrum master</li>
+</ul>
+</li>
+<li><p>iThome Serverless all-star speaker</p>
+<ul>
+<li>Topic: Build MVP with Angular and Google Firebase   </li>
+</ul>
+</li>
+<li><p>SAP ERP產品升級專案(2017-2018)</p>
+<ul>
+<li>擔任首席專案經理，負責專案前期的RFP、合約管理，及專案Kickoff後的專案管理及跨子公司、部門協調</li>
+</ul>
+</li>
+<li><p>TMS(Transportation Management)專案(2017-2018)</p>
+<ul>
+<li>擔任架構師及SA</li>
+<li>系統分析及設計- 實地作業觀察，訪談出貨秘書、調度人員、管理階層以建立TMS之流程圖及開發文件</li>
+<li>開發階段- 在以Scrum方式每兩周作一次Review，使用ASP.NET MVC5, Web API, Entity Framework Code first, angularJS開發</li>
+</ul>
+</li>
+<li><p>Team Foundation Server 升級 (2015)</p>
+<ul>
+<li>從TFS 2010升級至TFS 2013</li>
+<li>客製化TFS Task Board及Work Item，包含新增流程及欄位</li>
+<li>導入Continueous Integration及Release Management </li>
+<li>建立工作管理流程及實施教育訓練</li>
+</ul>
+</li>
+<li><p>帶領七人開發團隊完成衍生性金融商品Booking系統POC及第一階段上線 (2014-2015)</p>
+<ul>
+<li>與業務合作標案- POC、撰寫SOW、專案計畫書</li>
+<li>專案管理- 人力及時程規劃、與甲方跨部門協調(包含中後台及IT)</li>
+<li>建構管理- 架設SVN Server，與甲方PM合作建立文件管理方式及開發、測試環境</li>
+<li>系統分析及設計- 收集及收斂需求並開Spec文件(UML/UI mockup/欄位邏輯)、DB Schema，建立Test case</li>
+<li>開發階段-擔任Scrum master、Review meeting的專案報告及系統展示及說明，Code review，由Test case建立單元測試，建立比價演算法並實作</li>
+</ul>
+</li>
+<li><p>統一超商iCash非接觸卡專案 (2013)</p>
+<ul>
+<li>擔任線上交易Backend Team leader及Scrum master</li>
+<li>以ASP.NET Web API 2, Entity Framework實作包含線上即時認證、加值、交易之icasH後端服務</li>
+<li>開發支援多家特店之帳務系統，並每日與銀行對帳</li>
+</ul>
+</li>
+<li><p>統一超商iCash Android APP (2012)</p>
+<ul>
+<li>支援查詢附近超商之位置及icasH相關優惠活動，以及即時餘額查詢功能</li>
+<li>APP開發及模擬工具- Eclipse (Java-Android SDK, SQLite)，後端為Web Service</li>
+</ul>
+</li>
+<li><p>台新銀行Loan on line專案 (2008)</p>
+<ul>
+<li>負責開發及維護行銷活動之B-Tree系統，以產出行銷名單</li>
+<li>使用Informatica開發ETL jobs，資料庫為Oracle</li>
+</ul>
+</li>
+</ol>
+<h3 id="Side-projects"><a href="#Side-projects" class="headerlink" title="Side projects"></a>Side projects</h3><ul>
+<li><a href="https://ithelp.ithome.com.tw/users/20103220/ironman/1343" target="_blank" rel="noopener">2017iT邦幫忙鐵人賽-設計模式的30個實例</a> (2017)</li>
+<li><a href="http://chatbot.ithome.com.tw/" target="_blank" rel="noopener">樂透號碼預測及查詢Chatbot (iThome AI智能服務應用大賽)</a> (2017)</li>
+<li>福委會-線上投票及慶生會簡報(ASP.NET core + Angular5 + Firebase)</li>
+<li><a href="http://ithelp.ithome.com.tw/users/20103220/ironman/1001" target="_blank" rel="noopener">2016iT邦幫忙鐵人賽-Learning ASP.NET core + Angular2</a> (2016)</li>
+<li><a href="https://github.com/KarateJB/eBooks/tree/master/AngularJS" target="_blank" rel="noopener">AngularJS實務開發電子書</a> (2016)</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.jb.Android.JBSMS_GP" target="_blank" rel="noopener">簡訊自動發送Android APP</a> (2012)</li>
+<li><a href="https://github.com/KarateJB/LotoPrediction" target="_blank" rel="noopener">大樂透關聯式規則預測軟體</a> (2011, open source)</li>
+<li><a href="https://github.com/KarateJB/EzOracle" target="_blank" rel="noopener">EzOracle-資料庫查詢軟體</a> (2009, open source)  </li>
+</ul>
+<h2 id="獎項"><a href="#獎項" class="headerlink" title="獎項"></a>獎項</h2><ul>
+<li>公司專案評比第二名 : icasH多通路帳務系統 (2012)</li>
+</ul>
+<h2 id="擅長工具-平台"><a href="#擅長工具-平台" class="headerlink" title="擅長工具(平台)"></a>擅長工具(平台)</h2><ul>
+<li>Visual Studio </li>
+<li>Visual Studio Code</li>
+<li>MS Sql Server</li>
+<li>Team Foundation Server for CI/CD</li>
+<li>Git</li>
+<li>Tortoise SVN</li>
+<li>Firebase</li>
+<li>UML</li>
+<li>Docker </li>
+</ul>
+<h2 id="擅長編程語言-框架及技巧"><a href="#擅長編程語言-框架及技巧" class="headerlink" title="擅長編程語言/框架及技巧"></a>擅長編程語言/框架及技巧</h2><ul>
+<li>C#</li>
+<li>ASP.NET Core</li>
+<li>ASP.NET MVC5</li>
+<li>Web API 2</li>
+<li>Entity Framework Core</li>
+<li>Entity Framework 6</li>
+<li>Dapper</li>
+<li>ADO.NET</li>
+<li>AngularJS</li>
+<li>Vue.js</li>
+<li>Angular</li>
+<li>Typescript</li>
+<li>javascript</li>
+<li>Bootstrap</li>
+<li>Python</li>
+<li>Django</li>
+<li>Domain Driven Design</li>
+<li>Design Pattern</li>
+<li>Unit test</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/zh/About/">About Me</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
+        <p><span>发布时间:</span>2015年01月01日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 15时00分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/zh/About/" title="About Me">https://karatejb.github.io/zh/About/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/zh/About/　　作者: karatejb" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/en/Git/[Git] 01. Initial/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          01. Initial
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Table of contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#關於我"><span class="toc-number">1.</span> <span class="toc-text">關於我</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主要經歷"><span class="toc-number">2.</span> <span class="toc-text">主要經歷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Side-projects"><span class="toc-number">2.1.</span> <span class="toc-text">Side projects</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#獎項"><span class="toc-number">3.</span> <span class="toc-text">獎項</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#擅長工具-平台"><span class="toc-number">4.</span> <span class="toc-text">擅長工具(平台)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#擅長編程語言-框架及技巧"><span class="toc-number">5.</span> <span class="toc-text">擅長編程語言/框架及技巧</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="Hide TOC" title="Click here to show/hide TOC">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "Hide TOC";
+    var valueShow = "Show TOC";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/showshare.css">
+
+<div id="share" class="bdsharebuttonbox">
+    <button class="share-toggle-button"><i class="share-icon fa fa-share-alt"></i>
+    </button>
+    <ul class="share-items">
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-facebook" data-cmd="fbook" title="分享到Facebook"></a></li>
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-twitter" data-cmd="twi" title="分享到Twitter"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-linkedin" data-cmd="linkedin" title="分享到linkedin"></a></li>
+    </ul>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+    <defs>
+        <filter id="goo">
+            <fegaussianblur in="SourceGraphic" stddeviation="12" result="blur"/>
+            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"/>
+            <fecomposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+    </defs>
+</svg>
+<!-- 推荐开源CDN来选取需引用的外部JS //-->
+<script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/TweenMax.js"></script>
+<script>
+    window._bd_share_config = {
+        common: {
+            bdText: '',
+            //文本内容
+            bdDesc: '',
+            // 描述
+            bdUrl: '',
+            // URL地址
+            bdPic: ''
+            // 图片信息
+        },
+        share: [{
+            "bdSize": 24
+        }]
+    }
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33765729-1']);
+    _gaq.push(['_setDomainName', 'chuanke.com']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+    
+      <section id="comments">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=187664764656837&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fb-comments" data-href="https://karatejb.github.io" data-width="10%" data-numposts="5"></div>
+</section>      
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/en/Git/[Git] 01. Initial/" title="上一篇: 01. Initial">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh/About/">About Me</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 karatejb
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

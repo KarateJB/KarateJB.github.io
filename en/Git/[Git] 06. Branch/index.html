@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl">
+  
+  
+  
+  
+  <title>06. Branch | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06. Branch">
+<meta property="og:url" content="https://karatejb.github.io/en/Git/[Git] 06. Branch/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-01-01T06:50:44.651Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="06. Branch">
+<meta name="twitter:description" content="BranchList branches$ git branch    Parameter in short Value Description     (no parameters)   List local branches   –remote -r  List remote branches   –all -a  List local and remote branches    Create">
+  
+    <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet">
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">karatejb</a></h1>
+        </hgroup>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="Search" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menus</li>
+                        <li>Tags</li>
+                        
+                        
+                        <li>About me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/archives/">Articles</a></li>
+                        
+                            <li><a href="/categories/coding">Coding</a></li>
+                        
+                            <li><a href="/categories/devops">Devops</a></li>
+                        
+                            <li><a href="/categories/pm">PM</a></li>
+                        
+                            <li><a href="/categories/travel">Travel</a></li>
+                        
+                            <li><a href="/zh/about/">About</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/KarateJB" title="github">github</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="https://www.linkedin.com/in/karatejb/" title="linkedin">linkedin</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/git/" style="font-size: 10px;">git</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">A father and StarWars fan!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">karatejb</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">karatejb</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">Articles</a></li>
+                
+                    <li><a href="/categories/coding">Coding</a></li>
+                
+                    <li><a href="/categories/devops">Devops</a></li>
+                
+                    <li><a href="/categories/pm">PM</a></li>
+                
+                    <li><a href="/categories/travel">Travel</a></li>
+                
+                    <li><a href="/zh/about/">About</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/KarateJB" title="github">github</a>
+                    
+                        <a class="linkedin" target="_blank" href="https://www.linkedin.com/in/karatejb/" title="linkedin">linkedin</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-Git/[Git] 06. Branch" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/en/Git/[Git] 06. Branch/" class="article-date">
+      <time datetime="2018-12-24T23:43:24.000Z" itemprop="datePublished">2018-12-25</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      06. Branch
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Coding/">Coding</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h1><h2 id="List-branches"><a href="#List-branches" class="headerlink" title="List branches"></a>List branches</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:center">in short</th>
+<th style="text-align:center">Value</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">(no parameters)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List local branches</td>
+</tr>
+<tr>
+<td style="text-align:left">–remote</td>
+<td style="text-align:center">-r</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List remote branches</td>
+</tr>
+<tr>
+<td style="text-align:left">–all</td>
+<td style="text-align:center">-a</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">List local and remote branches</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Create-new-branch"><a href="#Create-new-branch" class="headerlink" title="Create new branch"></a>Create new branch</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch &#123;new_branch_name&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Checkout-branch-or-create-new-branch-if-not-exist"><a href="#Checkout-branch-or-create-new-branch-if-not-exist" class="headerlink" title="Checkout branch or create new branch if not exist"></a>Checkout branch or create new branch if not exist</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b &#123;branch_name&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Rename branch</span><br></pre></td></tr></table></figure>
+<p>$ git branch -m {old_branch_name} {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch -d {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch (force)</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch -D {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Checkout certain commit and create branch from it</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {sha-1 code}<br>$ git branch {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">or one line like this</span><br></pre></td></tr></table></figure></p>
+<p>$ git branch {new_branch_name} {sha-1 code}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Merge branches</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {source_branch}<br>$ git merge {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict...</span><br><span class="line"></span><br><span class="line">- Apply source ones</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout –ours xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Apply target ones</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout –theirs xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Merge certain commit from other branch</span><br></pre></td></tr></table></figure></p>
+<p>$ git cherry-pick {sha-1 code 1} {sha-1 code 2}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Pick certain commit to index</span><br></pre></td></tr></table></figure></p>
+<p>$ git cherry-pick {sha-1 code} –no-commit<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Rebase branches</span><br></pre></td></tr></table></figure></p>
+<p>$ git checkout {source_branch}<br>$ git rebase {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict, use the same commands on *Merge Branch* and then</span><br></pre></td></tr></table></figure></p>
+<p>$ git rebase –continue<br><code>`</code></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/en/Git/[Git] 06. Branch/">06. Branch</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 karatejb 的个人博客">karatejb</a></p>
+        <p><span>发布时间:</span>2018年12月25日 - 07时43分</p>
+        <p><span>最后更新:</span>2019年01月01日 - 14时50分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/en/Git/[Git] 06. Branch/" title="06. Branch">https://karatejb.github.io/en/Git/[Git] 06. Branch/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://karatejb.github.io/en/Git/[Git] 06. Branch/　　作者: karatejb" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/en/Git/[Git] 07. Tag/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          07. Tag
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/Git/[Git] 05. Log/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">05. Log</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Table of contents</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Branch"><span class="toc-number">1.</span> <span class="toc-text">Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#List-branches"><span class="toc-number">1.1.</span> <span class="toc-text">List branches</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Create-new-branch"><span class="toc-number">1.2.</span> <span class="toc-text">Create new branch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkout-branch-or-create-new-branch-if-not-exist"><span class="toc-number">1.3.</span> <span class="toc-text">Checkout branch or create new branch if not exist</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="Hide TOC" title="Click here to show/hide TOC">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "Hide TOC";
+    var valueShow = "Show TOC";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/showshare.css">
+
+<div id="share" class="bdsharebuttonbox">
+    <button class="share-toggle-button"><i class="share-icon fa fa-share-alt"></i>
+    </button>
+    <ul class="share-items">
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></li> -->
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-facebook" data-cmd="fbook" title="分享到Facebook"></a></li>
+        <!-- <li class="share-item"><a href="#" class="share-button fa fa-twitter" data-cmd="twi" title="分享到Twitter"></a></li> -->
+        <li class="share-item"><a href="#" class="share-button fa fa-linkedin" data-cmd="linkedin" title="分享到linkedin"></a></li>
+    </ul>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+    <defs>
+        <filter id="goo">
+            <fegaussianblur in="SourceGraphic" stddeviation="12" result="blur"/>
+            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"/>
+            <fecomposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+    </defs>
+</svg>
+<!-- 推荐开源CDN来选取需引用的外部JS //-->
+<script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/TweenMax.js"></script>
+<script>
+    window._bd_share_config = {
+        common: {
+            bdText: '',
+            //文本内容
+            bdDesc: '',
+            // 描述
+            bdUrl: '',
+            // URL地址
+            bdPic: ''
+            // 图片信息
+        },
+        share: [{
+            "bdSize": 24
+        }]
+    }
+    with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33765729-1']);
+    _gaq.push(['_setDomainName', 'chuanke.com']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+    
+      <section id="comments">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=187664764656837&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <div class="fb-comments" data-href="https://karatejb.github.io" data-width="10%" data-numposts="5"></div>
+</section>      
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/en/Git/[Git] 07. Tag/" title="上一篇: 07. Tag">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/en/Git/[Git] 05. Log/" title="下一篇: 05. Log">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 12. Submodules/">12. Submodules</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 11. Git Ignore/">11. Git Ignore</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 10. Garbage Collection/">10. Garbage Collection</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 09. Remote/">09. Remote</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 08. Stash/">08. Stash</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 07. Tag/">07. Tag</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 06. Branch/">06. Branch</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 05. Log/">05. Log</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 04. Reset/">04. Reset</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 03. Diff/">03. Diff</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 02. Commit/">02. Commit</a></li><li class="post-list-item"><a class="post-list-link" href="/en/Git/[Git] 01. Initial/">01. Initial</a></li><li class="post-list-item"><a class="post-list-link" href="/zh/About/">About Me</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 karatejb
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
