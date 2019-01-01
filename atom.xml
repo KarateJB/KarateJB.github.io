@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://karatejb.github.io/"/>
+  <updated>2019-01-01T06:47:27.820Z</updated>
+  <id>https://karatejb.github.io/</id>
+  
+  <author>
+    <name>karatejb</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>12. Submodules</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2012.%20Submodules/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 12. Submodules/</id>
+    <published>2018-12-29T23:43:24.000Z</published>
+    <updated>2019-01-01T06:47:27.820Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Add-Submodule"><a href="#Add-Submodule" class="headerlink" title="Add Submodule"></a>Add Submodule</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add &lt;git path&gt; &lt;directory name <span class="keyword">for</span> submodule&gt;</span><br></pre></td></tr></table></figure><p>For example, </p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git submodule add https://github.com/TheForceJB/GitPracticeSub.git GitPracticeSub</span><br></pre></td></tr></table></figure><p><img src="./assets/012.png" alt=""></p><p>In <code>.gitmodules</code>, we will find the following content,</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[submodule &quot;GitPracticeSub&quot;]</span><br><span class="line">path = GitPracticeSub</span><br><span class="line">url = https://github.com/TheForceJB/GitPracticeSub.git</span><br></pre></td></tr></table></figure><h2 id="Creating-Pull-Request"><a href="#Creating-Pull-Request" class="headerlink" title="Creating Pull Request"></a>Creating Pull Request</h2><p>However, if you would like to create some PRs for the submodule.<br>Instead of adding the target repository as submodule directly, we fork it and add the one in our repository as submodule.</p><p>For example, there are 2 repositories in my Github: </p><ol><li><code>KarateJB/GitPractice</code></li><li><code>KarateJB/GitPracticeSub</code> which is forked from <code>TheForceJB/GitPracticeSub</code></li></ol><p>Add <code>KarateJB/GitPracticeSub</code> as sub-module into <code>KarateJB/GitPractice</code>.<br>Modify and create PR at <code>KarateJB/GitPracticeSub</code>.</p><h2 id="Clone-a-repository-with-Submodule"><a href="#Clone-a-repository-with-Submodule" class="headerlink" title="Clone a repository with Submodule"></a>Clone a repository with Submodule</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;repository_url&gt;</span><br><span class="line">$ cd &lt;repository_name&gt; </span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br></pre></td></tr></table></figure><p>The above commands equals to</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;repository_url&gt; --recursive</span><br></pre></td></tr></table></figure><h2 id="Remove-Submodule"><a href="#Remove-Submodule" class="headerlink" title="Remove Submodule"></a>Remove Submodule</h2><blockquote><p>Reference : <a href="https://gist.github.com/myusuf3/7f645819ded92bda6677" target="_blank" rel="noopener">myusuf3/delete_git_submodule.md</a></p></blockquote><ol><li>Stage for removal and untrack submodule files </li></ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm --cached &lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure><ol start="2"><li>Remove files in <code>.git/modules/&lt;submodule&gt;</code></li></ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ rm -rf .git/modules/&lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure><ol start="3"><li>Commit</li></ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;Removed submodule&quot;</span><br></pre></td></tr></table></figure><ol start="4"><li>Delete the untracked submodule files</li></ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ rm -rf &lt;path_to_submodule&gt;</span><br></pre></td></tr></table></figure><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener">Git Tools - Submodules</a></li><li><a href="http://xtutu.me/git-submodule-and-pull-request/" target="_blank" rel="noopener">Git submodule &amp; pull request ! 让我们啃下这块骨头！</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Add-Submodule&quot;&gt;&lt;a href=&quot;#Add-Submodule&quot; class=&quot;headerlink&quot; title=&quot;Add Submodule&quot;&gt;&lt;/a&gt;Add Submodule&lt;/h1&gt;&lt;figure class=&quot;highlight bash
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>11. Git Ignore</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2011.%20Git%20Ignore/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 11. Git Ignore/</id>
+    <published>2018-12-28T23:43:24.000Z</published>
+    <updated>2019-01-01T06:48:16.518Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h1><h2 id="Ignore-single-file"><a href="#Ignore-single-file" class="headerlink" title="Ignore single file"></a>Ignore single file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">xxx.log</span><br></pre></td></tr></table></figure><h2 id="Ignore-Logs-xxx-log"><a href="#Ignore-Logs-xxx-log" class="headerlink" title="Ignore ./Logs/xxx.log"></a>Ignore ./Logs/xxx.log</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Logs/xxx.log</span><br></pre></td></tr></table></figure><h2 id="Ignore-all-log-in-any-folder-named-Logs"><a href="#Ignore-all-log-in-any-folder-named-Logs" class="headerlink" title="Ignore all *.log in any folder named Logs"></a>Ignore all *.log in any folder named Logs</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/Logs/*.log</span><br></pre></td></tr></table></figure><h2 id="Ignore-all-log-files"><a href="#Ignore-all-log-files" class="headerlink" title="Ignore all .log files"></a>Ignore all .log files</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*.log</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;gitignore&quot;&gt;&lt;a href=&quot;#gitignore&quot; class=&quot;headerlink&quot; title=&quot;.gitignore&quot;&gt;&lt;/a&gt;.gitignore&lt;/h1&gt;&lt;h2 id=&quot;Ignore-single-file&quot;&gt;&lt;a href=&quot;#Ignor
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10. Garbage Collection</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2010.%20Garbage%20Collection/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 10. Garbage Collection/</id>
+    <published>2018-12-27T23:43:24.000Z</published>
+    <updated>2019-01-01T06:48:49.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Garbage-collection"><a href="#Garbage-collection" class="headerlink" title="Garbage collection"></a>Garbage collection</h1><h2 id="GC-immediatly"><a href="#GC-immediatly" class="headerlink" title="GC immediatly"></a>GC immediatly</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git gc --prune=now</span><br></pre></td></tr></table></figure><blockquote><p>Don’t forget the reflog, make them expired by <code>$ git reflog expire --all --expire=now</code></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Garbage-collection&quot;&gt;&lt;a href=&quot;#Garbage-collection&quot; class=&quot;headerlink&quot; title=&quot;Garbage collection&quot;&gt;&lt;/a&gt;Garbage collection&lt;/h1&gt;&lt;h2 id=&quot;G
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>09. Remote</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2009.%20Remote/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 09. Remote/</id>
+    <published>2018-12-26T23:43:24.000Z</published>
+    <updated>2019-01-01T06:49:21.218Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Clone"><a href="#Clone" class="headerlink" title="Clone"></a>Clone</h1><ul><li><p>Add remote end-point</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https://github.com/KarateJB/Test.git</span><br></pre></td></tr></table></figure></li><li><p>Clone</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure></li></ul><h1 id="Push"><a href="#Push" class="headerlink" title="Push"></a>Push</h1><ul><li>Push with setting remote upstream branch<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push -u origin &#123;brach_name_for_remote&#125;</span><br></pre></td></tr></table></figure></li></ul><h1 id="Pull"><a href="#Pull" class="headerlink" title="Pull"></a>Pull</h1><p><code>git pull</code> equals to </p><ol><li><code>git fetch</code></li><li><code>git merger</code></li></ol><h2 id="Pull-remote-branch"><a href="#Pull-remote-branch" class="headerlink" title="Pull remote branch"></a>Pull remote branch</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout --track origin/&lt;branch&gt;</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure><h2 id="Pull-by-rebase-Which-will-not-create-a-new-commit-for-merging"><a href="#Pull-by-rebase-Which-will-not-create-a-new-commit-for-merging" class="headerlink" title="Pull by rebase (Which will not create a new commit for merging)"></a>Pull by rebase (Which will not create a new commit for merging)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull --rebase</span><br></pre></td></tr></table></figure><h1 id="Syncing-a-fork"><a href="#Syncing-a-fork" class="headerlink" title="Syncing a fork"></a>Syncing a fork</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch upstream</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git merge upstream/master</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Clone&quot;&gt;&lt;a href=&quot;#Clone&quot; class=&quot;headerlink&quot; title=&quot;Clone&quot;&gt;&lt;/a&gt;Clone&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Add remote end-point&lt;/p&gt;
+&lt;figure class=&quot;highlight
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>08. Stash</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2008.%20Stash/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 08. Stash/</id>
+    <published>2018-12-25T23:43:24.000Z</published>
+    <updated>2019-01-01T06:49:49.384Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>While we would like to switch our job to other branch and save current codes immediatly</p></blockquote><h2 id="Use-reset"><a href="#Use-reset" class="headerlink" title="Use reset"></a>Use reset</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add --all</span><br><span class="line">$ git commit -m &quot;Temporaryly commit, but not completed...&quot;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">then after doing something... we discard the last commit by rest.</span><br></pre></td></tr></table></figure><p>$ git reset HEAD^ –hard<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## Use Stash</span><br><span class="line"></span><br><span class="line">While we have not staged current modified codes, use `stash` to save them temporaryly.</span><br></pre></td></tr></table></figure></p><p>$ git stash<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; If you want to stash the untracked files as well</span><br><span class="line">``` </span><br><span class="line">$ git stash -u</span><br></pre></td></tr></table></figure></p><ul><li><p>List stash</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br></pre></td></tr></table></figure></li><li><p>POP the stash (Which will remove the stash after apply it on the same branch)</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash pop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure></li><li><p>Apply the stash(Which will not remove the stash after apply it)</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash apply stash@&#123;1&#125;</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>If the specified name of stash is not given, the latest stash will be applied</p></blockquote><ul><li>Remove stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git stash drop stash@&#123;1&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;While we would like to switch our job to other branch and save current codes immediatly&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Use-reset&quot;
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>07. Tag</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2007.%20Tag/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 07. Tag/</id>
+    <published>2018-12-25T23:43:24.000Z</published>
+    <updated>2019-01-01T06:50:15.122Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Tag"><a href="#Tag" class="headerlink" title="Tag"></a>Tag</h1><h2 id="Create-lightweight-tag-for-private-or-temporary-purpose"><a href="#Create-lightweight-tag-for-private-or-temporary-purpose" class="headerlink" title="Create lightweight tag (for private or temporary purpose)"></a>Create lightweight tag (for private or temporary purpose)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git tag &#123;tag_name&#125; &#123;sha-1_code&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Create annotated tag (for release or milestones)</span><br></pre></td></tr></table></figure><p>$ git tag {tag_name} {sha-1_code} -a -m “some comments for annotated tag…”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## List tags</span><br></pre></td></tr></table></figure></p><p>$ git tag -l<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete tag</span><br></pre></td></tr></table></figure></p><p>$ git tag -d {tag_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Use alias to create tag</span><br></pre></td></tr></table></figure></p><p>$ git config alias.XXXX ‘!git tag MyTag-$(date +”%Y-%m-%d_%H-%M-%S”)’<br>$ git XXXX {sha-1_code}<br><code>`</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Tag&quot;&gt;&lt;a href=&quot;#Tag&quot; class=&quot;headerlink&quot; title=&quot;Tag&quot;&gt;&lt;/a&gt;Tag&lt;/h1&gt;&lt;h2 id=&quot;Create-lightweight-tag-for-private-or-temporary-purpose&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>06. Branch</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2006.%20Branch/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 06. Branch/</id>
+    <published>2018-12-24T23:43:24.000Z</published>
+    <updated>2019-01-01T06:50:44.651Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h1><h2 id="List-branches"><a href="#List-branches" class="headerlink" title="List branches"></a>List branches</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure><table><thead><tr><th style="text-align:left">Parameter</th><th style="text-align:center">in short</th><th style="text-align:center">Value</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left">(no parameters)</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:left">List local branches</td></tr><tr><td style="text-align:left">–remote</td><td style="text-align:center">-r</td><td style="text-align:center"></td><td style="text-align:left">List remote branches</td></tr><tr><td style="text-align:left">–all</td><td style="text-align:center">-a</td><td style="text-align:center"></td><td style="text-align:left">List local and remote branches</td></tr></tbody></table><h2 id="Create-new-branch"><a href="#Create-new-branch" class="headerlink" title="Create new branch"></a>Create new branch</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch &#123;new_branch_name&#125;</span><br></pre></td></tr></table></figure><h2 id="Checkout-branch-or-create-new-branch-if-not-exist"><a href="#Checkout-branch-or-create-new-branch-if-not-exist" class="headerlink" title="Checkout branch or create new branch if not exist"></a>Checkout branch or create new branch if not exist</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b &#123;branch_name&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## Rename branch</span><br></pre></td></tr></table></figure><p>$ git branch -m {old_branch_name} {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch</span><br></pre></td></tr></table></figure></p><p>$ git branch -d {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Delete branch (force)</span><br></pre></td></tr></table></figure></p><p>$ git branch -D {branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## Checkout certain commit and create branch from it</span><br></pre></td></tr></table></figure></p><p>$ git checkout {sha-1 code}<br>$ git branch {new_branch_name}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">or one line like this</span><br></pre></td></tr></table></figure></p><p>$ git branch {new_branch_name} {sha-1 code}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Merge branches</span><br></pre></td></tr></table></figure></p><p>$ git checkout {source_branch}<br>$ git merge {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict...</span><br><span class="line"></span><br><span class="line">- Apply source ones</span><br></pre></td></tr></table></figure></p><p>$ git checkout –ours xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Apply target ones</span><br></pre></td></tr></table></figure></p><p>$ git checkout –theirs xxx.file<br>$ git add xxx.file<br>$ git commit -m “….”<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Merge certain commit from other branch</span><br></pre></td></tr></table></figure></p><p>$ git cherry-pick {sha-1 code 1} {sha-1 code 2}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- Pick certain commit to index</span><br></pre></td></tr></table></figure></p><p>$ git cherry-pick {sha-1 code} –no-commit<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Rebase branches</span><br></pre></td></tr></table></figure></p><p>$ git checkout {source_branch}<br>$ git rebase {target_branch}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">if conflict, use the same commands on *Merge Branch* and then</span><br></pre></td></tr></table></figure></p><p>$ git rebase –continue<br><code>`</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Branch&quot;&gt;&lt;a href=&quot;#Branch&quot; class=&quot;headerlink&quot; title=&quot;Branch&quot;&gt;&lt;/a&gt;Branch&lt;/h1&gt;&lt;h2 id=&quot;List-branches&quot;&gt;&lt;a href=&quot;#List-branches&quot; class=&quot;he
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>05. Log</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2005.%20Log/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 05. Log/</id>
+    <published>2018-12-23T23:43:24.000Z</published>
+    <updated>2019-01-01T06:50:59.117Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --oneline --graph</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --author=&quot;JB&quot;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --after=&quot;2018-03-02&quot; --since=&quot;10am&quot; --until=&quot;18pm&quot;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --pretty=format:&quot;%H %an %ad&quot;</span><br><span class="line">$ git log --pretty=format:&quot;%h %an %ad&quot;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --after=&quot;2018-07-11&quot; --pretty=format:&quot;%h %an %ad&quot;</span><br></pre></td></tr></table></figure><h2 id="Search-commit-messages"><a href="#Search-commit-messages" class="headerlink" title="Search commit messages"></a>Search commit messages</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git log --grep=&quot;Fix bugs&quot;</span><br></pre></td></tr></table></figure><h2 id="See-commit-logs-for-every-line-in-a-file"><a href="#See-commit-logs-for-every-line-in-a-file" class="headerlink" title="See commit logs for every line in a file"></a>See commit logs for every line in a file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git blame xxx.file</span><br></pre></td></tr></table></figure><h2 id="See-commit-logs-for-certain-lines-in-a-file"><a href="#See-commit-logs-for-certain-lines-in-a-file" class="headerlink" title="See commit logs for certain lines in a file"></a>See commit logs for certain lines in a file</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git blame -L 10,20 xxx.file</span><br></pre></td></tr></table></figure><h2 id="Verifies-the-connectivity-and-validity-of-the-objects"><a href="#Verifies-the-connectivity-and-validity-of-the-objects" class="headerlink" title="Verifies the connectivity and validity of the objects"></a>Verifies the connectivity and validity of the objects</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fsck</span><br></pre></td></tr></table></figure><p>and for unreachable objects</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fsck --unreachable</span><br></pre></td></tr></table></figure><h2 id="reflog-show-commit-and-head-moving-logs"><a href="#reflog-show-commit-and-head-moving-logs" class="headerlink" title="reflog: show commit and head moving logs"></a>reflog: show commit and head moving logs</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure><h2 id="reflog-clean-logs-nake-forbidden-objects-to-unreachable"><a href="#reflog-clean-logs-nake-forbidden-objects-to-unreachable" class="headerlink" title="reflog: clean logs (nake forbidden objects to unreachable)"></a>reflog: clean logs (nake forbidden objects to unreachable)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reflog expire --all --expire=now</span><br></pre></td></tr></table></figure><h2 id="list-files"><a href="#list-files" class="headerlink" title="list files"></a>list files</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git ls-files -s</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Log&quot;&gt;&lt;a href=&quot;#Log&quot; class=&quot;headerlink&quot; title=&quot;Log&quot;&gt;&lt;/a&gt;Log&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;spa
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>04. Reset</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2004.%20Reset/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 04. Reset/</id>
+    <published>2018-12-22T23:43:24.000Z</published>
+    <updated>2019-01-01T06:51:15.317Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Reset"><a href="#Reset" class="headerlink" title="Reset"></a>Reset</h1><h2 id="Checkout-file-for-latest-commit"><a href="#Checkout-file-for-latest-commit" class="headerlink" title="Checkout file for latest commit"></a>Checkout file for latest commit</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout xxx.file</span><br></pre></td></tr></table></figure><h2 id="Reset-to-relative-commit-previous-commit"><a href="#Reset-to-relative-commit-previous-commit" class="headerlink" title="Reset to relative commit (^: previous commit)"></a>Reset to relative commit (^: previous commit)</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git reset &#123;sha1-code&#125;^</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">or</span><br></pre></td></tr></table></figure><p>$ git reset {sha1-code}~1<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&gt; *Git reset modes*</span><br><span class="line">&gt; </span><br><span class="line">&gt; * mixed (Default)</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * soft</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes index, but keep them on working tree</span><br><span class="line">&gt;</span><br><span class="line">&gt; * hard</span><br><span class="line">&gt;</span><br><span class="line">&gt;   Revert current changes on working tree and index</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">##  Reset modes example</span><br><span class="line"></span><br><span class="line">Commit 3 times as following,</span><br><span class="line"></span><br><span class="line">![](../assets/001.png)</span><br><span class="line"></span><br><span class="line">![](../assets/002.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Then make changes and add to index. The diff results ...</span><br><span class="line"></span><br><span class="line">`git diff` (Compare working tree to index)</span><br><span class="line"></span><br><span class="line">No difference</span><br><span class="line"></span><br><span class="line">`git diff --cached` (Compare index to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/003.png)</span><br><span class="line"></span><br><span class="line">`git diff HEAD` (Compare working tree to HEAD)</span><br><span class="line"></span><br><span class="line">![](../assets/004.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Now reset the the 1st commit and see the differences between 3 modes</span><br><span class="line"></span><br><span class="line">* mixed</span><br></pre></td></tr></table></figure></p><p>$ git reset –mixed af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/005.png)</span><br><span class="line"></span><br><span class="line">![](../assets/006.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff --cached` will get nothing.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* soft</span><br></pre></td></tr></table></figure></p><p>$ git reset –soft af01615<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">![](../assets/007.png)</span><br><span class="line"></span><br><span class="line">![](../assets/008.png)</span><br><span class="line"></span><br><span class="line">ps. `git diff` will get nothing. </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* hard</span><br></pre></td></tr></table></figure></p><p>$ git reset –hard af01615<br><code>`</code></p><p><img src="../assets/009.png" alt=""></p><p>ps. <code>git diff</code>,  <code>git diff --cached</code>,  <code>git diff HEAD</code> will all get nothing. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Reset&quot;&gt;&lt;a href=&quot;#Reset&quot; class=&quot;headerlink&quot; title=&quot;Reset&quot;&gt;&lt;/a&gt;Reset&lt;/h1&gt;&lt;h2 id=&quot;Checkout-file-for-latest-commit&quot;&gt;&lt;a href=&quot;#Checkout-f
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>03. Diff</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2003.%20Diff/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 03. Diff/</id>
+    <published>2018-12-21T23:43:24.000Z</published>
+    <updated>2019-01-01T06:51:32.364Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Diff"><a href="#Diff" class="headerlink" title="Diff"></a>Diff</h1><p><img src="../assets/010.png" alt=""></p><h2 id="Compare-working-tree-to-index"><a href="#Compare-working-tree-to-index" class="headerlink" title="Compare working tree to index"></a>Compare working tree to index</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure><h2 id="Compare-index-to-HEAD"><a href="#Compare-index-to-HEAD" class="headerlink" title="Compare index to HEAD"></a>Compare index to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff --cached</span><br></pre></td></tr></table></figure><h2 id="Compare-working-tree-to-HEAD"><a href="#Compare-working-tree-to-HEAD" class="headerlink" title="Compare working tree to HEAD"></a>Compare working tree to HEAD</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git diff HEAD</span><br></pre></td></tr></table></figure><h2 id="Comapare-2-commits"><a href="#Comapare-2-commits" class="headerlink" title="Comapare 2 commits"></a>Comapare 2 commits</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt;</span><br></pre></td></tr></table></figure><p>On certain file,<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file</span><br></pre></td></tr></table></figure></p><p>Output a file<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff &lt;old_sha1_code&gt; &lt;new_sha1_code&gt; xxx.file &gt; xxx.diff</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Diff&quot;&gt;&lt;a href=&quot;#Diff&quot; class=&quot;headerlink&quot; title=&quot;Diff&quot;&gt;&lt;/a&gt;Diff&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;../assets/010.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Compare-worki
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02. Commit</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2002.%20Commit/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 02. Commit/</id>
+    <published>2018-12-20T23:43:24.000Z</published>
+    <updated>2019-01-01T06:51:53.220Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Commit"><a href="#Commit" class="headerlink" title="Commit"></a>Commit</h1><h2 id="Track-all-files-in-this-repository"><a href="#Track-all-files-in-this-repository" class="headerlink" title="Track all files in this repository"></a>Track all files in this repository</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add --all</span><br></pre></td></tr></table></figure><h2 id="Track-only-all-files-in-current-path-including-of-sub-directories"><a href="#Track-only-all-files-in-current-path-including-of-sub-directories" class="headerlink" title="Track only all files in current path, including of sub-directories"></a>Track only all files in current path, including of sub-directories</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br></pre></td></tr></table></figure><h2 id="Remove-the-file-and-track-it"><a href="#Remove-the-file-and-track-it" class="headerlink" title="Remove the file and track it"></a>Remove the file and track it</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm xxx.file</span><br></pre></td></tr></table></figure><p>Which equals to </p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ del xxx.file</span><br><span class="line">$ git add xxx.file</span><br></pre></td></tr></table></figure><h2 id="Remove-the-file-and-untrack-it"><a href="#Remove-the-file-and-untrack-it" class="headerlink" title="Remove the file and untrack it"></a>Remove the file and untrack it</h2><p>Stage a file for removal, but it won’t be removed from the working dir. The file will be shown as <strong>untracked</strong>.</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm --cached xxx.file</span><br></pre></td></tr></table></figure><h2 id="Rename-the-file-and-track-it"><a href="#Rename-the-file-and-track-it" class="headerlink" title="Rename the file and track it"></a>Rename the file and track it</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git mv xxx.file yyy.file</span><br></pre></td></tr></table></figure><p>  Which equals to </p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv xxx.file yyy.file</span><br><span class="line">git add --all</span><br></pre></td></tr></table></figure><h2 id="Untrack-the-file-already-committed"><a href="#Untrack-the-file-already-committed" class="headerlink" title="Untrack the file already committed"></a>Untrack the file already committed</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm xxx.file --cached</span><br></pre></td></tr></table></figure><h2 id="Amend-the-last-commit’s-message"><a href="#Amend-the-last-commit’s-message" class="headerlink" title="Amend the last commit’s message"></a>Amend the last commit’s message</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit --amend -m &quot;Refine message&quot;</span><br></pre></td></tr></table></figure><h2 id="Add-tracked-file-to-the-last-commit"><a href="#Add-tracked-file-to-the-last-commit" class="headerlink" title="Add tracked file to the last commit"></a>Add tracked file to the last commit</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add zzz.html</span><br><span class="line">$ git commit --amend --no-edit</span><br></pre></td></tr></table></figure><h2 id="Update-the-commit-history"><a href="#Update-the-commit-history" class="headerlink" title="Update the commit history"></a>Update the commit history</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rebase -i &#123;begin_sha-1_code&#125;</span><br></pre></td></tr></table></figure><p>  which will open the default git editor</p><p>  <img src="../assets/011.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Commit&quot;&gt;&lt;a href=&quot;#Commit&quot; class=&quot;headerlink&quot; title=&quot;Commit&quot;&gt;&lt;/a&gt;Commit&lt;/h1&gt;&lt;h2 id=&quot;Track-all-files-in-this-repository&quot;&gt;&lt;a href=&quot;#Tra
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01. Initial</title>
+    <link href="https://karatejb.github.io/en/Git/%5BGit%5D%2001.%20Initial/"/>
+    <id>https://karatejb.github.io/en/Git/[Git] 01. Initial/</id>
+    <published>2018-12-19T23:43:24.000Z</published>
+    <updated>2019-01-01T06:52:19.014Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Initialize-and-configuration"><a href="#Initialize-and-configuration" class="headerlink" title="Initialize and configuration"></a>Initialize and configuration</h1><h3 id="Initialize"><a href="#Initialize" class="headerlink" title="Initialize"></a>Initialize</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure><h3 id="Configure-Glabal"><a href="#Configure-Glabal" class="headerlink" title="Configure (Glabal)"></a>Configure (Glabal)</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global -e</span><br></pre></td></tr></table></figure><h3 id="Configure-Local"><a href="#Configure-Local" class="headerlink" title="Configure (Local)"></a>Configure (Local)</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --local -e</span><br></pre></td></tr></table></figure><h3 id="Config-user-name-and-email"><a href="#Config-user-name-and-email" class="headerlink" title="Config user name and email"></a>Config user name and email</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --local user.name &#123;your_name&#125;</span><br><span class="line">$ git config --local user.email &#123;your_email&#125;</span><br></pre></td></tr></table></figure><h3 id="Use-VSCODE-for-default-git-editor"><a href="#Use-VSCODE-for-default-git-editor" class="headerlink" title="Use VSCODE for default git editor"></a>Use VSCODE for default git editor</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global core.editor &quot;code --wait&quot;</span><br></pre></td></tr></table></figure><blockquote><p>(<a href="https://stackoverflow.com/a/36644561/7045253" target="_blank" rel="noopener">reference</a>)</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Initialize-and-configuration&quot;&gt;&lt;a href=&quot;#Initialize-and-configuration&quot; class=&quot;headerlink&quot; title=&quot;Initialize and configuration&quot;&gt;&lt;/a&gt;In
+      
+    
+    </summary>
+    
+      <category term="Coding" scheme="https://karatejb.github.io/categories/Coding/"/>
+    
+    
+      <category term="git" scheme="https://karatejb.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>About Me</title>
+    <link href="https://karatejb.github.io/zh/About/"/>
+    <id>https://karatejb.github.io/zh/About/</id>
+    <published>2014-12-31T23:43:24.000Z</published>
+    <updated>2019-01-01T07:00:26.191Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h2><ul><li>2018 iThome Serverless All-star講師</li><li>2018 台灣區TMS運輸管理系統 主架構師 </li><li>2017 台灣及大陸區SAP ERP升級專案 首席專案經理</li><li>2018 IT邦幫忙30天鐵人賽Modern Web組成功完賽</li><li>2017 IT邦幫忙30天鐵人賽Software development組成功完賽</li><li>2013 icash二代非接觸式卡專案上線佈機至全台統一超商，擔任後端開發Team lead</li><li>2012 icash多通路帳務系統 首席專案經理，如期如質上線後獲得當年公司專案評比第二名</li><li>2012 - 2018 公司內部技術教育訓練講師</li><li>2015 - 至今 敏捷式開發教育訓練及導入 <ol><li>User Story mapping workshop</li><li>How to start a sprint workshop</li></ol></li><li>證照(括號為取得年份)：<ol><li>(2017) 國際敏捷專案管理師 (PMI-ACP)</li><li>(2016) Cetified Scrum Product Owner (Scrum Alliance)</li><li>(2016) 新產品開發管理師國際認證 (NPDP)</li><li>(2013) Certified Scrum Master (Scrum Alliance)</li><li>(2013) UML FUNDAMENTAL</li><li>(2012) 國際專案管理師 (PMP, renew 2 times)</li></ol></li><li>更多資訊：<ol><li><a href="http://karatejb.blogspot.tw/" target="_blank" rel="noopener">個人技術部落格Blogger</a></li><li><a href="https://github.com/KarateJB" target="_blank" rel="noopener">Github</a></li><li><a href="https://www.linkedin.com/in/karatejb/" target="_blank" rel="noopener">Linkedin</a></li></ol></li></ul><h2 id="主要經歷"><a href="#主要經歷" class="headerlink" title="主要經歷"></a>主要經歷</h2><ol><li><p>HR績效評量系統開發</p><ul><li>主架構師，建立Vue.js+ASP.NET MVC/Web API+Redis+Sql Server stack</li><li>兼任Scrum master</li></ul></li><li><p>iThome Serverless all-star speaker</p><ul><li>Topic: Build MVP with Angular and Google Firebase   </li></ul></li><li><p>SAP ERP產品升級專案(2017-2018)</p><ul><li>擔任首席專案經理，負責專案前期的RFP、合約管理，及專案Kickoff後的專案管理及跨子公司、部門協調</li></ul></li><li><p>TMS(Transportation Management)專案(2017-2018)</p><ul><li>擔任架構師及SA</li><li>系統分析及設計- 實地作業觀察，訪談出貨秘書、調度人員、管理階層以建立TMS之流程圖及開發文件</li><li>開發階段- 在以Scrum方式每兩周作一次Review，使用ASP.NET MVC5, Web API, Entity Framework Code first, angularJS開發</li></ul></li><li><p>Team Foundation Server 升級 (2015)</p><ul><li>從TFS 2010升級至TFS 2013</li><li>客製化TFS Task Board及Work Item，包含新增流程及欄位</li><li>導入Continueous Integration及Release Management </li><li>建立工作管理流程及實施教育訓練</li></ul></li><li><p>帶領七人開發團隊完成衍生性金融商品Booking系統POC及第一階段上線 (2014-2015)</p><ul><li>與業務合作標案- POC、撰寫SOW、專案計畫書</li><li>專案管理- 人力及時程規劃、與甲方跨部門協調(包含中後台及IT)</li><li>建構管理- 架設SVN Server，與甲方PM合作建立文件管理方式及開發、測試環境</li><li>系統分析及設計- 收集及收斂需求並開Spec文件(UML/UI mockup/欄位邏輯)、DB Schema，建立Test case</li><li>開發階段-擔任Scrum master、Review meeting的專案報告及系統展示及說明，Code review，由Test case建立單元測試，建立比價演算法並實作</li></ul></li><li><p>統一超商iCash非接觸卡專案 (2013)</p><ul><li>擔任線上交易Backend Team leader及Scrum master</li><li>以ASP.NET Web API 2, Entity Framework實作包含線上即時認證、加值、交易之icasH後端服務</li><li>開發支援多家特店之帳務系統，並每日與銀行對帳</li></ul></li><li><p>統一超商iCash Android APP (2012)</p><ul><li>支援查詢附近超商之位置及icasH相關優惠活動，以及即時餘額查詢功能</li><li>APP開發及模擬工具- Eclipse (Java-Android SDK, SQLite)，後端為Web Service</li></ul></li><li><p>台新銀行Loan on line專案 (2008)</p><ul><li>負責開發及維護行銷活動之B-Tree系統，以產出行銷名單</li><li>使用Informatica開發ETL jobs，資料庫為Oracle</li></ul></li></ol><h3 id="Side-projects"><a href="#Side-projects" class="headerlink" title="Side projects"></a>Side projects</h3><ul><li><a href="https://ithelp.ithome.com.tw/users/20103220/ironman/1343" target="_blank" rel="noopener">2017iT邦幫忙鐵人賽-設計模式的30個實例</a> (2017)</li><li><a href="http://chatbot.ithome.com.tw/" target="_blank" rel="noopener">樂透號碼預測及查詢Chatbot (iThome AI智能服務應用大賽)</a> (2017)</li><li>福委會-線上投票及慶生會簡報(ASP.NET core + Angular5 + Firebase)</li><li><a href="http://ithelp.ithome.com.tw/users/20103220/ironman/1001" target="_blank" rel="noopener">2016iT邦幫忙鐵人賽-Learning ASP.NET core + Angular2</a> (2016)</li><li><a href="https://github.com/KarateJB/eBooks/tree/master/AngularJS" target="_blank" rel="noopener">AngularJS實務開發電子書</a> (2016)</li><li><a href="https://play.google.com/store/apps/details?id=com.jb.Android.JBSMS_GP" target="_blank" rel="noopener">簡訊自動發送Android APP</a> (2012)</li><li><a href="https://github.com/KarateJB/LotoPrediction" target="_blank" rel="noopener">大樂透關聯式規則預測軟體</a> (2011, open source)</li><li><a href="https://github.com/KarateJB/EzOracle" target="_blank" rel="noopener">EzOracle-資料庫查詢軟體</a> (2009, open source)  </li></ul><h2 id="獎項"><a href="#獎項" class="headerlink" title="獎項"></a>獎項</h2><ul><li>公司專案評比第二名 : icasH多通路帳務系統 (2012)</li></ul><h2 id="擅長工具-平台"><a href="#擅長工具-平台" class="headerlink" title="擅長工具(平台)"></a>擅長工具(平台)</h2><ul><li>Visual Studio </li><li>Visual Studio Code</li><li>MS Sql Server</li><li>Team Foundation Server for CI/CD</li><li>Git</li><li>Tortoise SVN</li><li>Firebase</li><li>UML</li><li>Docker </li></ul><h2 id="擅長編程語言-框架及技巧"><a href="#擅長編程語言-框架及技巧" class="headerlink" title="擅長編程語言/框架及技巧"></a>擅長編程語言/框架及技巧</h2><ul><li>C#</li><li>ASP.NET Core</li><li>ASP.NET MVC5</li><li>Web API 2</li><li>Entity Framework Core</li><li>Entity Framework 6</li><li>Dapper</li><li>ADO.NET</li><li>AngularJS</li><li>Vue.js</li><li>Angular</li><li>Typescript</li><li>javascript</li><li>Bootstrap</li><li>Python</li><li>Django</li><li>Domain Driven Design</li><li>Design Pattern</li><li>Unit test</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;關於我&quot;&gt;&lt;a href=&quot;#關於我&quot; class=&quot;headerlink&quot; title=&quot;關於我&quot;&gt;&lt;/a&gt;關於我&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;2018 iThome Serverless All-star講師&lt;/li&gt;
+&lt;li&gt;2018 台灣區TMS運輸管理系統
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
